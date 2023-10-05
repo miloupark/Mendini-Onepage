@@ -1,0 +1,303 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
+@font-face {
+  font-family: "Pretendard-Thin";
+  font-weight: 100;
+  src: url(../fonts/Pretendard-Thin.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard-ExtraLight";
+  font-weight: 200;
+  src: url(../fonts/Pretendard-ExtraLight.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard-Light";
+  font-weight: 300;
+  src: url(../fonts/Pretendard-Light.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard-Regular";
+  font-weight: 400;
+  src: url(../fonts/Pretendard-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard-Medium";
+  font-weight: 500;
+  src: url(../fonts/Pretendard-Medium.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  font-weight: 600;
+  src: url(../fonts/Pretendard-SemiBold.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard-Bold";
+  font-weight: 700;
+  src: url(../fonts/Pretendard-Bold.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard-ExtraBold";
+  font-weight: 800;
+  src: url(../fonts/Pretendard-ExtraBold.woff) format("woff");
+}
+@font-face {
+  font-family: "Pretendard-Black";
+  font-weight: 900;
+  src: url(../fonts/Pretendard-Black.woff) format("woff");
+}
+* {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+:root {
+  --sm: 768px;
+  --md: 992px;
+  --lg: 1200px;
+  --bs-primary: rgb(0, 255, 187);
+  --bs-primary-rgb: (0, 255, 187);
+  --bg-Maincolor: #FFF2C2;
+  --bg-grey: #f4f4f4;
+  --bg-black: #333;
+  --bg-green: #8ad99c;
+  --sub-color: #9BCFF1;
+  --pnt-red: #FF0000;
+  --pnt-blue: #0400FF;
+  --font-family: "Pretendard Variable";
+  --font-Black: #333;
+  --font-white: #fff;
+  --fz-HeaderTitle: 220px;
+  --fz-contents: 24px;
+  --fz-nav: 32px ;
+}
+
+.sec-g {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px 0;
+}
+
+.sec-inner {
+  padding: 0 40px;
+}
+
+#header {
+  height: 100vh;
+  padding: 380px 40px 0;
+  background-color: var(--bg-Maincolor);
+}
+
+#main {
+  margin-top: 72px;
+}
+
+.header-title {
+  position: relative;
+}
+.header-title .header-title-g {
+  font-size: var(--fz-HeaderTitle);
+  font-weight: 900;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+}
+.header-title .header-title-default {
+  color: var(--sub-color);
+}
+.header-title .header-title-red {
+  color: var(--sub-color);
+}
+.header-title .header-title-blue {
+  color: var(--sub-color);
+}
+
+.alessandroM {
+  position: absolute;
+  bottom: 300px;
+  left: 100px;
+  width: 260px;
+}
+
+.navbar {
+  padding: 0 16px;
+  background-color: var(--bg-grey);
+}
+
+.navbar-expand-sm .navbar-nav .nav-link {
+  padding: 0 40px;
+}
+
+.navbar-brand {
+  display: block;
+  width: 220px;
+  height: 80px;
+  background: url(/images/mendini-sign.png) 50% 50% no-repeat;
+  background-size: contain;
+}
+
+.nav-item:active .nav-link {
+  background-color: #fff;
+}
+
+.nav-tit {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--font-Black);
+}
+
+.biography {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: url(/images/mendini1.webp) no-repeat;
+  background-position: 50% 40%;
+  background-size: cover;
+}
+
+.biography-title {
+  position: absolute;
+  bottom: 22px;
+  right: 40px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 50px;
+  color: var(--font-white);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.biography-cont-g {
+  padding-top: 24px;
+}
+
+.biography-cont-g-bottom {
+  display: flex;
+  justify-content: end;
+  margin-top: 250px;
+}
+
+.biography-text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: var(--fz-contents);
+  color: #333;
+  background-color: #fff;
+  line-height: 37px;
+  padding: 4px 0;
+}
+
+.biography-cont-ml1 {
+  margin-left: 64px;
+}
+
+.biography-cont-ml2 {
+  margin-left: 100px;
+}
+
+.biography-cont-ml3 {
+  margin-left: 40px;
+}
+
+.biography-cont-ml4 {
+  margin-left: 20px;
+}
+
+.architecture {
+  position: relative;
+  width: 100%;
+  height: 400vh;
+  background-color: var(--bg-green);
+}
+
+.architecture-title {
+  position: absolute;
+  bottom: 22px;
+  right: 40px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 50px;
+  color: var(--font-white);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.architecture-image-g {
+  height: 298vh;
+}
+.architecture-image-g .architecture-image-grid {
+  height: 20vh;
+}
+.architecture-image-g .architecture-image-grid .architecture1-img {
+  position: sticky;
+  display: block;
+  top: 80px;
+  width: 500px;
+}
+.architecture-image-g .architecture2-img {
+  position: sticky;
+  display: block;
+  top: 300px;
+  left: 600px;
+  width: 400px;
+}
+.architecture-image-g .architecture3-img {
+  position: sticky;
+  display: block;
+  top: 100px;
+  left: 990px;
+  width: 500px;
+  transform: scaleX(-1);
+}
+.architecture-image-g .architecture4-img {
+  position: sticky;
+  top: 200px;
+  right: 20px;
+  width: 400px;
+}
+.architecture-image-g .architecture5-img {
+  position: sticky;
+  display: block;
+  top: 500px;
+  right: 20px;
+  width: 500px;
+}
+
+.architecture-animated-title {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  font-size: 60px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  padding: 92px 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.architecture-animated-title .architecture-animated-track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 60s linear infinite;
+  border-bottom: 1px solid #333;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (hover: hover) and (min-width: 700px) {
+  .architecture-animated-text {
+    color: #333;
+    transform: translateY(calc(100% - 8rem));
+  }
+}
+.architecture-animated-text-effect {
+  color: var(--bg-Maincolor);
+  font-weight: 900;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}/*# sourceMappingURL=comm.css.map */

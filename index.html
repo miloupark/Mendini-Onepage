@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="페이지 제목" />
+  <meta property="og:description" content="페이지 설명" />
+  <meta property="og:image" content="http://www.mysite.com/article/article1_featured_image.jpg"/>
+  <meta property="og:url" content="http://www.mysite.com/article/article1.html" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="페이지 제목" />
+  <meta name="twitter:description" content="페이지 설명" />
+  <meta name="twitter:image" content="http://www.mysite.com/article/article1.html"/>
+  <meta name="twitter:domain" content="사이트 명" />
+  <title>Onepage</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+  <link rel="stylesheet" type="text/css" href="fullpage.css" />
+  <link rel="stylesheet" href="./dist/css/comm.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script type="text/javascript" src="../js/jquery.fullPage.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+  <script defer src="./dist/js/comm.js"></script>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <div id="fullpage" class="wrap">
+    <header id="header" class="container-fluid">
+      <h1 class="header-title">
+        <span class="header-title-g header-title-default">A essandr</span><span class="header-title-g header-title-red">o</span>
+        <br><span class="header-title-g header-title-default">M</span><span class="header-title-g header-title-blue">e</span>
+        <span class="header-title-g header-title-default">ndini</span> 
+      </h1>
+      <div class="title-alessandroM">
+        <img class="alessandroM" src="./images/alessandroM.png" alt="alessi alessandroM">
+      </div>
+    </header>
+    
+    <!-- Nav -->
+    <nav class="navbar navbar-inverse navbar-expand-sm navbar-dark sticky-top">
+      <div class="container-fluid">
+        <h1>
+          <a class="navbar-brand" href="#"></a>
+        </h1>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+          <ul class="nav navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#biography"><span class="nav-tit">Biography</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#architecture"><span class="nav-tit">Architecture</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#furniture"><span class="nav-tit">Furniture</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#object"><span class="nav-tit">Object</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section id="biography" class="sec-g section biography">
+        <div class="sec-inner"><!-- container로 그리드 잡아줌 -->
+          <h2 class="biography-title">Biography</h2>
+          <div class="biography-cont-g biography-cont-g-top">
+            <div class="biography-cont" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+              <span class="biography-text biography-cont-ml1">Alessandro Mendini is an Italian architect, and was born in Milan in 1931.</span><br>
+              <span class="biography-text biography-cont-ml2">He has been editor-in-chief of the magazines Casabella, Modo and Domus.
+              </span>
+            </div>
+            <div class="biography-cont" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+              <span class="biography-text" >Monographs on his personal work and the projects he made in conjunction</span>
+            </div>
+            <div class="biography-cont" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+              <span class="biography-text biography-cont-ml3" >with the Alchimia group have been published in different languages.</span>
+            </div>
+            <div class="biography-cont" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+              <span class="biography-text">Mendini makes design objects, furniture, interiors, paintings,
+                <br>installations and architecture. He produces work with international 
+              </span>
+            </div>
+            <div class="biography-cont" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+              <span class="biography-text biography-cont-ml1">manufacturers and editors, such as the Galerie kreo
+              </span>
+            </div>
+            <div class="biography-cont" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+              <span class="biography-text">in Paris since 2001. He is also a consultant for the image and brart
+              </span>
+            </div>
+            <div class="biography-cont" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+              <span class="biography-text biography-cont-ml1">direction of companies in Europe as well as the Far East.
+              </span>
+            </div>
+          </div>
+          <div class="biography-cont-g-bottom">
+            <div class="biography-cont" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+              <span class="biography-text biography-cont-ml2">His theoretic and written work, along with his design work, 
+              finds <br>its origin at the crossroads between art, design and architecture.
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="architecture" class="sec-g section architecture">
+        <div class="sec-inner">
+          <h2 class="sec-tit architecture-title">Architecture</h2>
+          <div class="architecture-image-g">
+            <div class="architecture-image-grid">
+              <img class="architecture1-img sticky" src="./images/mendini-arch6.png" alt="mendini architect">
+            </div>
+            <img class="architecture2-img sticky" src="./images/mendini-arch7.jpg" alt="mendini architect">
+            <img class="architecture3-img sticky" src="./images/mendini-arch5.png" alt="mendini architect">
+            <img class="architecture4-img sticky" src="./images/" alt="mendini architect">
+            <img class="architecture5-img sticky" src="./images/mendini-archi.webp" alt="mendini architect">
+          </div>
+          <div class="architecture-text-g">
+            <div class="architecture-animated-title">
+              <div class="architecture-animated-track">
+                <div class="architecture-animated-text">Torre Paradiso, Hiroshima, Japan, 1988
+                  This commemorative tower in Hiroshima was built to mark the centenary of the city's ferry terminal. 
+                  Its striking shape was designed by Mendini to create a symbol of 
+                  <span class="architecture-animated-text-effect">hope and prosperity</span> for the city.
+                </div>
+              </div>
+            </div>
+            <div class="architecture-animated-title">
+              <div class="architecture-animated-track">
+                <div class="architecture-animated-text"><span class="architecture-animated-text-effect">Steintor bus stops,</span> Hannover, Germany, 1992
+                  This bus and tram station in Hannover was hard to miss, with its black and yellow chequerboard walls and golden turrets.
+                  It was recently dismantled to make way for a new line, but is expected to be rebuilt in a new location soon.</div>
+              </div>
+            </div>
+            <div class="architecture-animated-title">
+              <div class="architecture-animated-track">
+                <div class="architecture-animated-text">Groninger Museum, Groningen, Netherlands, 1994 
+                  Mendini enlisted Philippe Starck, Michele De Lucchi and Coop Himmelb(l)au to help him design 
+                  the colourful collection of buildings that make up this important art and design <span class="architecture-animated-text-effect">museum</span> in Groningen.
+                  He designed the central museum building, which features a bold yellow tower, 
+                  while his collaborators added an assortment of unusual pavilions around it.
+                </div>
+              </div>
+            </div>
+            <div class="architecture-animated-title">
+              <div class="architecture-animated-track">
+                <div class="architecture-animated-text">Galleria Mendini, Lörrach, Germany, 2004
+                  Mendini's bold use of <span class="architecture-animated-text-effect"></span> colour and shape is used to liven up this otherwise simple commercial building. 
+                  It was originally intended as a shopping centre, hence the name, but eventually ended up as an office block.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="furniture" class="sec-g section furniture">
+        <div class="container">
+          <div class="title d-flex justify-content-center mb-5">
+            <h2>Furniture</h2>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <h2>제목</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Reiciendis cumque libero explicabo placeat et odit facere porro quia. 
+                Et, voluptatum sapiente esse illo placeat nostrum sunt ab adipisci ipsum possimus.</p>
+            </div>
+            <div class="col-sm-4">
+              <h2>제목</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Reiciendis cumque libero explicabo placeat et odit facere porro quia. 
+                Et, voluptatum sapiente esse illo placeat nostrum sunt ab adipisci ipsum possimus.</p>
+            </div>
+            <div class="col-sm-4">
+              <h2>제목</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Reiciendis cumque libero explicabo placeat et odit facere porro quia. 
+                Et, voluptatum sapiente esse illo placeat nostrum sunt ab adipisci ipsum possimus.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="object" class="bg-light sec-g section object">
+        <div class="container">
+          <div class="title d-flex justify-content-center mb-5">
+            <h2>Object</h2>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <h2>제목</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Reiciendis cumque libero explicabo placeat et odit facere porro quia. 
+                Et, voluptatum sapiente esse illo placeat nostrum sunt ab adipisci ipsum possimus.</p>
+            </div>
+            <div class="col-sm-4">
+              <h2>제목</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Reiciendis cumque libero explicabo placeat et odit facere porro quia. 
+                Et, voluptatum sapiente esse illo placeat nostrum sunt ab adipisci ipsum possimus.</p>
+            </div>
+            <div class="col-sm-4">
+              <h2>제목</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Reiciendis cumque libero explicabo placeat et odit facere porro quia. 
+                Et, voluptatum sapiente esse illo placeat nostrum sunt ab adipisci ipsum possimus.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer"></footer>
+  </div>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    
+  </script>
+  new fullpage('#fullpage', {
+    //options here
+    autoScrolling:true,
+    scrollHorizontally: true
+  });
+</body>
+</html>
