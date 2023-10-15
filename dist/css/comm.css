@@ -45,7 +45,13 @@
   src: url(../fonts/Pretendard-Black.woff) format("woff");
 }
 * {
+  padding: 0;
+  margin: 0;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+p {
+  margin-bottom: 0;
 }
 
 :root {
@@ -56,8 +62,11 @@
   --bs-primary-rgb: (0, 255, 187);
   --bg-Maincolor: #FFF2C2;
   --bg-grey: #f4f4f4;
+  --bg-pink:#F9D9DC;
   --bg-black: #333;
   --bg-green: #8ad99c;
+  --bg-brown: #514030;
+  --bg-lightbrown: #7C7363;
   --sub-color: #9BCFF1;
   --pnt-red: #FF0000;
   --pnt-blue: #0400FF;
@@ -82,12 +91,15 @@
 }
 
 .sec-inner {
+  width: 100%;
+  height: 100%;
   padding: 0 40px;
 }
 
 #header {
+  width: 100%;
   height: 100vh;
-  padding: 380px 40px 0;
+  padding: 280px 40px 0;
   background-color: var(--bg-Maincolor);
 }
 
@@ -149,13 +161,106 @@
   color: var(--font-Black);
 }
 
+.mendini-who {
+  width: 100%;
+  height: 100vh;
+  background-color: #514030;
+}
+
+.mendini-who-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.mendini-who-amuleto {
+  width: 180px;
+  height: 240px;
+  background: url(/images/amuleto_lamp.png) 0 0 no-repeat;
+  background-size: cover;
+}
+
+.mendini-who__name {
+  font-size: 60px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.mendini-who-shape {
+  position: relative;
+}
+
+.jumping-ball {
+  width: 18px;
+  height: 18px;
+  background: blue;
+  border-radius: 100%;
+  position: fixed;
+  top: -45px;
+  right: -180px;
+  left: 0;
+  margin: auto;
+}
+
+.jump-animation {
+  background-color: yellow;
+  animation-name: bounce;
+  animation-duration: 800ms;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.79, 0.04, 0.8, 0.6);
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate3d(0, 0, 0);
+    height: 18px;
+    background-color: yellow;
+  }
+  90% {
+    height: 18px;
+    background-color: #0400FF;
+  }
+  100% {
+    transform: translate3d(0, 60px, 0);
+    height: 18px;
+    background-color: red;
+  }
+}
+.mendini-said {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-brown);
+  padding: 40px 0;
+}
+
+.mendini-said-image {
+  width: 800px;
+  height: 560px;
+  background: url(/images/mendini8.jpg) 20% 25% no-repeat;
+  opacity: 50%;
+}
+
+.mendini-said-g {
+  position: relative;
+  font-size: 56px;
+  font-weight: 600;
+  color: #fff;
+  z-index: 10;
+}
+
+.mendini-said__txt {
+  display: flex;
+  justify-content: center;
+}
+
 .biography {
   width: 100%;
   height: 100vh;
   position: relative;
-  background: url(/images/mendini1.jpg) no-repeat;
-  background-position: 50% 40%;
-  background-size: cover;
+  background-color: var(--bg-lightbrown);
 }
 
 .biography-title {

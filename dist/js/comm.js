@@ -1,4 +1,39 @@
+// Mendini who - mendini name
+var ctrl = new ScrollMagic.Controller();
 
+$(".mendini-who-inner").each(function(i) {
+  var inner = $(this).find(".amuleto-outer");
+  var outer = $(this).find(".amuleto-inner");
+  var tl = new TimelineMax();
+  
+  tl.from(outer, 0.25, { scaleX: 0 });
+  tl.from(inner, 0.65, { yPercent: 100, ease: Back.easeOut });
+  
+  new ScrollMagic.Scene({
+    triggerElement: this,
+    triggerHook: 0,
+  })
+    .setTween(tl)
+    .addIndicators({
+      colorTrigger: "white",
+      colorStart: "white",
+      colorEnd: "white",
+      indent: 40
+    })
+    .addTo(ctrl);
+});
+
+
+// // gsap.registerPlugin(ScrollTrigger);
+// gsap.to(".mendini-who-shape-circle", {
+//   scrollTrigger: {
+//     trigger: ".mendini-who",
+//     markers: true,
+//     start: "20% 1px",
+// 		scrub: true,
+//   },
+//   x: -300, duration: 1,
+// });
 
 // const headerEl = document.querySelector('#header');
 

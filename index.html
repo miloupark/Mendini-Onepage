@@ -26,9 +26,15 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script type="text/javascript" src="../js/jquery.fullPage.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script type="text/javascript" src="../js/jquery.fullPage.js"></script>
   <script defer src="./dist/js/comm.js"></script>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -56,16 +62,24 @@
         <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
           <ul class="nav navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#biography"><span class="nav-tit">Biography</span></a>
+              <a class="nav-link" href="#biography">
+                <span class="nav-tit">Biography</span>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#architecture"><span class="nav-tit">Architecture</span></a>
+              <a class="nav-link" href="#architecture">
+                <span class="nav-tit">Architecture</span>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#furniture"><span class="nav-tit">Furniture</span></a>
+              <a class="nav-link" href="#furniture">
+                <span class="nav-tit">Furniture</span>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#object"><span class="nav-tit">Object</span></a>
+              <a class="nav-link" href="#object">
+                <span class="nav-tit">Object</span>
+              </a>
             </li>
           </ul>
         </div>
@@ -73,6 +87,33 @@
     </nav>
 
     <main>
+      <!-- Mendini who -->
+      <section id="mendini-who" class="sec-g section mendini-who">
+        <div class="sec-inner mendini-who-inner">
+          <div class="mendini-who-amuleto" data-aos="fade-up">
+            <span class="blind" aria-label="알레산드로 멘디니"></span>
+          </div>
+          <div class="mendini-who-amuleto-cont amuleto-outer">
+            <p class="mendini-who__name amuleto-inner">Alessandro Mendini<br>Italian designer and architect</p>
+            <div class="jumping-ball jump-animation"></div>
+          </div>
+        </div>
+        <div class="sec-inner mendini-said-inner">
+          <div class="mendini-said-image">
+            <span class="blind" aria-label="알레산드로 멘디니"></span>
+          </div>
+          <p class="mendini-said-g mendini-said__txt">“I treat objects as if they<br>
+            were human beings; I make<br> 
+            them smile.”</p>
+          </div>
+      </section>
+
+      <!-- Mendini said -->
+      <section id="mendini-said" class="section mendini-said">
+ 
+      </section>
+
+      <!-- Biography -->
       <section id="biography" class="sec-g section biography">
         <div class="sec-inner">
           <h2 class="biography-title">Biography</h2>
@@ -116,6 +157,7 @@
         </div>
       </section>
       
+      <!-- Architecture -->
       <section id="architecture" class="sec-g section architecture">
         <div class="sec-inner">
           <h2 class="sec-tit architecture-title">Architecture</h2>
@@ -167,6 +209,7 @@
         </div>
       </section>
 
+      <!-- Furniture -->
       <section id="furniture" class="section furniture">
         <div class="sec-inner">
           <h2 class="furniture-title">Furniture</h2>
@@ -198,6 +241,7 @@
         </div>
       </section>
 
+      <!-- Object -->
       <section id="object" class="bg-light sec-g section object">
         <div class="container">
           <div class="title d-flex justify-content-center mb-5">
@@ -230,17 +274,19 @@
     <footer id="footer"></footer>
   </div>
 
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
   <script>
     AOS.init();
   </script>
   <script>
-    
-  </script>
-  new fullpage('#fullpage', {
-    //options here
-    autoScrolling:true,
-    scrollHorizontally: true
-  });
+    gsap.registerPlugin(ScrollTrigger);
+    </script> 
+  <!-- <script>
+    new fullpage('#fullpage', {
+      //options here
+      autoScrolling:true,
+      scrollHorizontally: true
+    });
+  </script> -->
 </body>
 </html>
