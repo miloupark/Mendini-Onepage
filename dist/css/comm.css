@@ -99,8 +99,7 @@ p {
 #header {
   width: 100%;
   height: 100vh;
-  padding: 280px 40px 0;
-  background-color: var(--bg-Maincolor);
+  background-color: #333;
 }
 
 #main {
@@ -113,16 +112,6 @@ p {
 .header-title .header-title-g {
   font-size: var(--fz-HeaderTitle);
   font-weight: 900;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
-}
-.header-title .header-title-default {
-  color: var(--sub-color);
-}
-.header-title .header-title-red {
-  color: var(--sub-color);
-}
-.header-title .header-title-blue {
   color: var(--sub-color);
 }
 
