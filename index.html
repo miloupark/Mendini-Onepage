@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
   <link rel="stylesheet" type="text/css" href="fullpage.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./dist/css/comm.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -35,17 +36,39 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script type="text/javascript" src="../js/jquery.fullPage.js"></script>
+  <script type="text/javascript" src="vendors/scrolloverflow.min.js"></script>
+  <script type="text/javascript" src="fullpage.js"></script>
   <script defer src="./dist/js/comm.js"></script>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
   <div id="fullpage" class="wrap">
-    <header id="header" class="container-fluid">
+    <header id="header" class="section header container-fluid">
       <h1 class="header-title">
-        <span class="header-title-g">Alessandro Mendini</span> 
+        <div class="header-title_alessandro header-title-g">
+          <span>A</span>
+          <div class="title-l-clip">
+            <span class="title-l">l</span>
+            <img class="alessandroM" src="./images/alessandroM.png" alt="alessi alessandroM">
+          </div>
+          <span>e</span>
+          <span>s</span>
+          <span>s</span>
+          <span>a</span>
+          <span>n</span>
+          <span>d</span>
+          <span>r</span>
+          <span>o</span>
+        </div>
+        <div class="header-title_mendini header-title-g">
+          <span>m</span>
+          <span>e</span>
+          <span>n</span>
+          <span>d</span>
+          <span>i</span>
+          <span>n</span>
+          <span>i</span>
+        </div>
       </h1>
-      <div class="title-alessandroM">
-        <img class="alessandroM" src="./images/alessandroM.png" alt="alessi alessandroM">
-      </div>
     </header>
     
     <!-- Nav -->
@@ -85,75 +108,90 @@
     </nav>
 
     <main>
-      <!-- Mendini who -->
-      <section id="mendini-who" class="sec-g section mendini-who">
-        <div class="sec-inner mendini-who-inner">
+      <!-- Biography -->
+      <section id="biography" class="section biography">
+        <h2 class="biography-title">Biography</h2>
+        <!-- Mendini who -->     
+        <div class="slide sec-inner mendini-who slide" data-anchor="slide1">
           <div class="mendini-who-amuleto" data-aos="fade-up">
             <span class="blind" aria-label="알레산드로 멘디니"></span>
           </div>
           <div class="mendini-who-amuleto-cont amuleto-outer">
             <p class="mendini-who__name amuleto-inner">Alessandro Mendini<br>Italian designer and architect</p>
-            <div class="jumping-ball jump-animation"></div>
+            <div class="mendini-who__jumping jumping-ball jump-animation"></div>
           </div>
         </div>
-        <div class="sec-inner mendini-said-inner">
-          <div class="mendini-said-image">
+        <!-- Mendini said -->
+        <div class="slide sec-inner mendini-said"
+        data-aos="fade-up"
+        data-aos-duration="3000" data-anchor="slide2">
+          <div class="mendini-said-image" 
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine">
             <span class="blind" aria-label="알레산드로 멘디니"></span>
           </div>
-          <p class="mendini-said-g mendini-said__txt">“I treat objects as if they<br>
-            were human beings; I make<br> 
-            them smile.”</p>
-          </div>
-      </section>
-
-      <!-- Mendini said -->
-      <section id="mendini-said" class="section mendini-said">
- 
-      </section>
-
-      <!-- Biography -->
-      <section id="biography" class="sec-g section biography">
-        <div class="sec-inner">
-          <h2 class="biography-title">Biography</h2>
-          <div class="biography-cont-g biography-cont-g-top">
-            <div class="biography-cont" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-              <span class="biography-text biography-cont-ml1">Alessandro Mendini is an Italian architect, and was born in Milan in 1931.</span><br>
-              <span class="biography-text biography-cont-ml2">He has been editor-in-chief of the magazines Casabella, Modo and Domus.
-              </span>
+          <div class="mendini-said-text"
+          data-aos="fade-left"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine">
+            <div class="mendini-said-quote">
+              <p class="mendini-said-quote_txt">“I treat objects as if they<br>
+                were human beings; I make<br> 
+                them smile.”
+              </p>
             </div>
-            <div class="biography-cont" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
-              <span class="biography-text" >Monographs on his personal work and the projects he made in conjunction</span>
-            </div>
-            <div class="biography-cont" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
-              <span class="biography-text biography-cont-ml3" >with the Alchimia group have been published in different languages.</span>
-            </div>
-            <div class="biography-cont" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-              <span class="biography-text">Mendini makes design objects, furniture, interiors, paintings,
-                <br>installations and architecture. He produces work with international 
-              </span>
-            </div>
-            <div class="biography-cont" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-              <span class="biography-text biography-cont-ml1">manufacturers and editors, such as the Galerie kreo
-              </span>
-            </div>
-            <div class="biography-cont" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-              <span class="biography-text">in Paris since 2001. He is also a consultant for the image and brart
-              </span>
-            </div>
-            <div class="biography-cont" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-              <span class="biography-text biography-cont-ml1">direction of companies in Europe as well as the Far East.
-              </span>
-            </div>
-          </div>
-          <div class="biography-cont-g-bottom">
-            <div class="biography-cont" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
-              <span class="biography-text biography-cont-ml2">His theoretic and written work, along with his design work, 
-              finds <br>its origin at the crossroads between art, design and architecture.
-              </span>
+            <div class="mendini-said-biography"
+            data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom">
+              <p class="mendini-said-biography_txt">
+                Alessandro Mendini is an Italian architect, and was born in Milan in 1931. He has been editor-in-chief of the magazines Casabella, Modo and Domus. Monographs on his personal work and the projects he made in conjunction with the Alchimia group have been published in different languages. Mendini makes design objects, furniture, interiors, paintings, installations and architecture. He produces work with international manufacturers and editors, such as the Galerie kreo in Paris since 2001. He is also a consultant for the image and art direction of companies in Europe as well as the Far East. His theoretic and written work, along with his design work, finds its origin at the crossroads between art, design and architecture.
+              </p>
             </div>
           </div>
         </div>
       </section>
+
+    
+<!-- 
+      <div class="biography-cont-g biography-cont-g-top">
+        <div class="biography-cont" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+          <span class="biography-text biography-cont-ml1">Alessandro Mendini is an Italian architect, and was born in Milan in 1931.</span><br>
+          <span class="biography-text biography-cont-ml2">He has been editor-in-chief of the magazines Casabella, Modo and Domus.
+          </span>
+        </div>
+        <div class="biography-cont" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+          <span class="biography-text" >Monographs on his personal work and the projects he made in conjunction</span>
+        </div>
+        <div class="biography-cont" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+          <span class="biography-text biography-cont-ml3" >with the Alchimia group have been published in different languages.</span>
+        </div>
+        <div class="biography-cont" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+          <span class="biography-text">Mendini makes design objects, furniture, interiors, paintings,
+            <br>installations and architecture. He produces work with international 
+          </span>
+        </div>
+        <div class="biography-cont" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+          <span class="biography-text biography-cont-ml1">manufacturers and editors, such as the Galerie kreo
+          </span>
+        </div>
+        <div class="biography-cont" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+          <span class="biography-text">in Paris since 2001. He is also a consultant for the image and brart
+          </span>
+        </div>
+        <div class="biography-cont" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+          <span class="biography-text biography-cont-ml1">direction of companies in Europe as well as the Far East.
+          </span>
+        </div>
+      </div>
+      <div class="biography-cont-g-bottom">
+        <div class="biography-cont" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+          <span class="biography-text biography-cont-ml2">His theoretic and written work, along with his design work, 
+          finds <br>its origin at the crossroads between art, design and architecture.
+          </span>
+        </div>
+      </div>
+   -->
       
       <!-- Architecture -->
       <section id="architecture" class="sec-g section architecture">
@@ -240,8 +278,74 @@
       </section>
 
       <!-- Object -->
-      <section id="object" class="bg-light sec-g section object">
-        <div class="container">
+      <section id="object" class="sec-g section object">
+        <div class="object-sec-inner">
+          <!-- Object-Swiper -->
+          <div class="swiper mySwiper-object1">
+            <div class="object-wrap swiper-wrapper">
+              <div class="object-slide1-1 swiper-slide">
+                <img class="object-slide1-1_img" src="./images/amuleto_lamp.png" alt="Amuleto lamp">
+              </div>
+              <div class="object-slide1-2 swiper-slide">Amuleto Lamp</div>
+              <div class="object-slide1-3 swiper-slide">
+                <img class="object-slide1-3_img" src="./images/obj-parrot-sommelier-corkscrew2.png" alt="parrot corkscrew">
+              </div>
+              <div class="object-slide1-4 swiper-slide">Parrot Corkscrew</div>
+              <div class="object-slide1-5 swiper-slide">
+                <img class="object-slide1-5_img" src="./images/obj-alessini-childrens-cutlery2.png" alt="childrens curtlery">
+              </div>
+              <div class="object-slide1-6 swiper-slide">
+                <img class="object-slide1-6_img" src="./images/obj-alessini-childrens-cutlery1.png" alt="childrens curtlery box">
+              </div>
+              <div class="object-slide1-7 swiper-slide">Childrens<br>Cutlery set</div>
+              <div class="object-slide1-8 swiper-slide">Slide 8</div>
+              <div class="object-slide1-9 swiper-slide">Slide 9</div>
+              <div class="object-slide1-10 swiper-slide">Slide 9</div>
+              <div class="object-slide1-11 swiper-slide">Slide 9</div>
+              <div class="object-slide1-12 swiper-slide">Slide 9</div>
+              <div class="object-slide1-13 swiper-slide">Slide 9</div>
+              <div class="object-slide1-14 swiper-slide">Slide 9</div>
+              <div class="object-slide1-15 swiper-slide">Slide 9</div>
+            </div>
+          </div>
+          <!-- Object-fixed box -->
+          <div class="object-fixed">
+            <div class="object-fixed-wrap">
+              <div class="object-fixed-slide1 object-fixed-slide"></div>
+              <div class="object-fixed-slide2 object-fixed-slide"></div>
+              <div class="object-fixed-slide3 object-fixed-slide"></div>
+              <div class="object-fixed-slide4 object-fixed-slide"></div>
+              <div class="object-fixed-slide5 object-fixed-slide"></div>
+              <div class="object-fixed-slide6 object-fixed-slide"></div>
+            </div>
+          </div>
+          <!-- Object-Swiper2 -->
+          <div class="swiper mySwiper-object2">
+            <div class="object-wrap swiper-wrapper">
+              <div class="object-slide2-1 swiper-slide">
+                <img class="object-slide2-1_img" src="" alt="">
+              </div>
+              <div class="object-slide2-2 swiper-slide">Amuleto lamp</div>
+              <div class="object-slide2-3 swiper-slide">Slide 3</div>
+              <div class="object-slide2-4 swiper-slide">Slide 4</div>
+              <div class="object-slide2-5 swiper-slide">Slide 5</div>
+              <div class="object-slide2-6 swiper-slide">Slide 6</div>
+              <div class="object-slide2-7 swiper-slide">Slide 7</div>
+              <div class="object-slide2-8 swiper-slide">Slide 8</div>
+              <div class="object-slide2-9 swiper-slide">Slide 9</div>
+              <div class="object-slide2-10 swiper-slide">Slide 9</div>
+              <div class="object-slide2-11 swiper-slide">Slide 9</div>
+              <div class="object-slide2-12 swiper-slide">Slide 9</div>
+              <div class="object-slide2-13 swiper-slide">Slide 9</div>
+              <div class="object-slide2-14 swiper-slide">Slide 9</div>
+              <div class="object-slide2-15 swiper-slide">Slide 9</div>
+            </div>
+          </div>
+        
+
+        </div>
+
+        <!-- <div div class="container">
           <div class="title d-flex justify-content-center mb-5">
             <h2>Object</h2>
           </div>
@@ -265,20 +369,16 @@
                 Et, voluptatum sapiente esse illo placeat nostrum sunt ab adipisci ipsum possimus.</p>
             </div>
           </div>
-        </div>
+        </div>     -->
       </section>
+      
+      <footer id="footer"></footer>
     </main>
-
-    <footer id="footer"></footer>
   </div>
 
 
-  <script>
-    AOS.init();
-  </script>
-  <script>
-    gsap.registerPlugin(ScrollTrigger);
-    </script> 
+
+
   <!-- <script>
     new fullpage('#fullpage', {
       //options here
@@ -286,5 +386,8 @@
       scrollHorizontally: true
     });
   </script> -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  
+
 </body>
 </html>

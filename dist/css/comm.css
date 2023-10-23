@@ -92,13 +92,17 @@ p {
 
 .sec-inner {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   padding: 0 40px;
 }
 
 #header {
+  display: flex;
   width: 100%;
   height: 100vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
   background-color: #333;
 }
 
@@ -107,19 +111,43 @@ p {
 }
 
 .header-title {
-  position: relative;
-}
-.header-title .header-title-g {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-family);
   font-size: var(--fz-HeaderTitle);
-  font-weight: 900;
+  font-weight: 800;
+  line-height: 0.9;
   color: var(--sub-color);
+}
+
+.header-title-g {
+  display: flex;
+  height: 220px;
+}
+
+.title-l-clip {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 4%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.title-l {
+  display: block;
 }
 
 .alessandroM {
   position: absolute;
-  bottom: 300px;
-  left: 100px;
-  width: 260px;
+  width: 60px;
+  height: 200px;
+  transform: translateY(-100%);
+  background: url(/images/alessandroM.png) 0 0 no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .navbar {
@@ -150,18 +178,16 @@ p {
   color: var(--font-Black);
 }
 
-.mendini-who {
+.biography {
   width: 100%;
-  height: 100vh;
   background-color: #514030;
 }
 
-.mendini-who-inner {
+.mendini-who {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
 }
 
 .mendini-who-amuleto {
@@ -172,13 +198,10 @@ p {
 }
 
 .mendini-who__name {
+  font-family: var(--font-family);
   font-size: 60px;
   font-weight: 700;
   color: #fff;
-}
-
-.mendini-who-shape {
-  position: relative;
 }
 
 .jumping-ball {
@@ -219,85 +242,45 @@ p {
   }
 }
 .mendini-said {
-  width: 100%;
-  height: 100vh;
-  background-color: var(--bg-brown);
-  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
 
 .mendini-said-image {
-  width: 800px;
-  height: 560px;
+  width: 50%;
+  height: 70%;
   background: url(/images/mendini8.jpg) 20% 25% no-repeat;
-  opacity: 50%;
+  opacity: 50% !important;
 }
 
-.mendini-said-g {
+.mendini-said-text {
+  display: flex;
+  width: 50%;
+  height: 70%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mendini-said-quote_txt {
   position: relative;
-  font-size: 56px;
-  font-weight: 600;
-  color: #fff;
-  z-index: 10;
-}
-
-.mendini-said__txt {
   display: flex;
   justify-content: center;
-}
-
-.biography {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  background-color: var(--bg-lightbrown);
-}
-
-.biography-title {
-  position: absolute;
-  bottom: 22px;
-  right: 40px;
+  text-align: center;
   font-family: var(--font-family);
-  font-weight: 700;
-  font-size: 50px;
-  color: var(--font-white);
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+  font-size: 40px;
+  font-weight: 500;
+  padding: 20px 0;
+  color: #fff;
 }
 
-.biography-cont-g {
-  padding-top: 24px;
-}
-
-.biography-cont-g-bottom {
-  display: flex;
-  justify-content: end;
-  margin-top: 250px;
-}
-
-.biography-text {
+.mendini-said-biography {
   font-family: var(--font-family);
-  font-weight: 400;
-  font-size: var(--fz-contents);
-  color: #333;
-  background-color: #fff;
-  line-height: 37px;
-  padding: 4px 0;
-}
-
-.biography-cont-ml1 {
-  margin-left: 64px;
-}
-
-.biography-cont-ml2 {
-  margin-left: 100px;
-}
-
-.biography-cont-ml3 {
-  margin-left: 40px;
-}
-
-.biography-cont-ml4 {
-  margin-left: 20px;
+  font-weight: 300;
+  color: #fff;
+  padding: 20px;
+  border-top: 1px solid #eee;
 }
 
 .architecture {
@@ -516,4 +499,106 @@ p {
   width: 800px;
   height: 200px;
   border: 1px solid #fff;
+}
+
+.object {
+  background-color: #d3dfe9;
+}
+
+.object-sec-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.swiper {
+  width: 100%;
+}
+
+.swiper-slide {
+  width: 200px;
+  height: 227px;
+  text-align: center;
+  font-size: 18px;
+  background-color: #dfdfdf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.object-slide1-1 {
+  padding: 16px;
+  background-color: #604c40;
+}
+.object-slide1-1 .object-slide1-1_img {
+  width: 90%;
+}
+
+.object-slide1-2 {
+  background-color: #97c59b;
+  font-family: var(--font-family);
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.object-slide1-3 {
+  padding: 16px;
+  background-color: #fff;
+}
+.object-slide1-3 .object-slide1-3_img {
+  width: 120%;
+}
+
+.object-slide1-4 {
+  background-color: #45b6c0;
+  font-family: var(--font-family);
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.object-slide1-5 {
+  padding: 16px;
+  background-color: #6c757d;
+}
+.object-slide1-5 .object-slide1-5_img {
+  width: 100%;
+}
+
+.object-slide1-6 {
+  padding: 16px;
+  background-color: #fff;
+}
+.object-slide1-6 .object-slide1-6_img {
+  width: 120%;
+}
+
+.object-slide1-7 {
+  background-color: #C4698C;
+  font-family: var(--font-family);
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.object-fixed {
+  width: 100%;
+}
+.object-fixed .object-fixed-wrap {
+  display: flex;
+  gap: 30px;
+}
+
+.object-fixed-slide {
+  width: 227px;
+  height: 227px;
+  text-align: center;
+  font-size: 18px;
+  background-color: #fff8f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
 }/*# sourceMappingURL=comm.css.map */

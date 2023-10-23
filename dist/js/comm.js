@@ -1,7 +1,19 @@
+AOS.init();
+gsap.registerPlugin(ScrollTrigger);
+
+// header-title_alessandro
+gsap.to(".title-l-clip", {
+  y: -100, // 슬라이딩할 거리 설정
+  duration: 1, // 애니메이션 지속 시간 설정
+  repeat: -1, // 무한 반복
+  ease: "linear" // 선형 이징 사용
+});
+
+
 // Mendini who - mendini name
 var ctrl = new ScrollMagic.Controller();
 
-$(".mendini-who-inner").each(function(i) {
+$(".mendini-who").each(function(i) {
   var inner = $(this).find(".amuleto-outer");
   var outer = $(this).find(".amuleto-inner");
   var tl = new TimelineMax();
@@ -23,6 +35,60 @@ $(".mendini-who-inner").each(function(i) {
     .addTo(ctrl);
 });
 
+
+// Object-Swiper
+var swiper = new Swiper(".mySwiper-object1", {
+  slidesPerView: 6,
+  spaceBetween: 30,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+});
+// Object-Swiper2
+var swiper = new Swiper(".mySwiper-object2", {
+  slidesPerView: 6,
+  spaceBetween: 30,
+  // direction: 'reversed',
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+});
+  
+// $(document).ready(function() {
+// 	$('#fullpage').fullpage({
+// 		//options here
+// 		autoScrolling:true,
+// 		scrollHorizontally: true
+// 	});
+ 
+// 	//methods
+// 	$.fn.fullpage.setAllowScrolling(false);
+// });
+
+// if (첫번째섹션이라면) { 	
+// 	$("img").attr("data-aos", "fade-down") 	
+// 	aos.refreshHard() } 
+// else if (첫번째 섹션이 아니라면) {
+//  	$("#section1 [data-aos]").attr("data-aos", "") 	
+// aos.refreshHard() 
+// }
+
+
+
+// afterLoad : function(origin, destination) {
+//   $('#fullpage .section').find('.animated').each(function() {
+//           var $this = $(this);
+//           var Ani = $this.attr('data-animated');
+//           $this.removeClass(Ani);
+//         });
+//         $('#fullpage .section').eq(destination - 1).find('.animated').each(function () {
+//           var $this = $(this);
+//           var Ani = $this.attr('data-animated');
+//           $this.addClass(Ani);
+//         });
+//   }
 
 // // gsap.registerPlugin(ScrollTrigger);
 // gsap.to(".mendini-who-shape-circle", {
