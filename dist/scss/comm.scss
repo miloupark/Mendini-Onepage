@@ -5,7 +5,7 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: "Pretendard Variable", Pretendard, GmarketSansMedium, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 p {
   margin-bottom: 0;
@@ -29,7 +29,8 @@ p {
   --pnt-red: #FF0000;
   --pnt-blue: #0400FF;
   
-  --font-family : "Pretendard Variable";
+  --font-pretendard : "Pretendard Variable";
+  --font-gmarket : "GmarketSansMedium";
 
   --font-Black : #333;
   --font-white : #fff;
@@ -38,8 +39,15 @@ p {
   --fz-contents : 24px;
   --fz-nav: 32px
 }
-
-// layout
+section {
+  height: 100vh;
+  font-size: 35px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+}
+layout
 .wrap {
   width: 100%;
   margin: 0 auto;
@@ -73,7 +81,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: var(--font-family);
+  font-family: var(--font-pretendard);
   font-size: var(--fz-HeaderTitle);
   font-weight: 800;
   // letter-spacing: -.02em;
@@ -133,7 +141,7 @@ p {
   }
 }
 .nav-tit {
-  font-family: var(--font-family);
+  font-family: var(--font-pretendard);
   font-weight: 700;
   font-size: 20px;
   color: var(--font-Black);
@@ -159,7 +167,7 @@ p {
   background-size: cover;
 }
 .mendini-who__name {
-  font-family: var(--font-family);
+  font-family: var(--font-pretendard);
   font-size: 60px;
   font-weight: 700;
   color: #fff;
@@ -233,14 +241,14 @@ p {
   display: flex;
   justify-content: center;
   text-align: center;
-  font-family: var(--font-family);
+  font-family: var(--font-pretendard);
   font-size: 40px;
   font-weight: 500;
   padding: 20px 0;
   color: #fff;
 }
 .mendini-said-biography {
-  font-family: var(--font-family);
+  font-family: var(--font-pretendard);
   font-weight: 300;
   color: #fff;
   padding: 20px;
@@ -258,7 +266,7 @@ p {
   position: absolute;
   bottom: 22px;
   right: 40px;
-  font-family: var(--font-family);
+  font-family: var(--font-pretendard);
   font-weight: 700;
   font-size: 50px;
   color: var(--font-white);
@@ -311,7 +319,7 @@ p {
   max-width:100%; 
   height: auto; 
   font-size: 60px; 
-  font-family: var(--font-family); 
+  font-family: var(--font-pretendard); 
   font-weight: 500; 
   padding: 92px 0; 
   overflow-x: hidden; 
@@ -362,7 +370,7 @@ p {
   position: absolute;
   bottom: 22px;
   right: 40px;
-  font-family: var(--font-family);
+  font-family: var(--font-pretendard);
   font-weight: 700;
   font-size: 50px;
   color: var(--font-white);
@@ -466,11 +474,47 @@ p {
   flex-direction: column;
   gap: 20px;
 }
-.swiper {
-  width: 100%;
-  // height: 50%;
+
+// Object-fixed box
+.object-fixed {
+  width: 100%; 
+  .object-fixed-wrap {
+    display: flex;
+    gap: 30px;
+  }
+}
+.object-fixed-slide {
+  display: flex;
+  width: 227px;
+  height: 227px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  padding: 16px;
+  border-radius: 20px; 
+  background-color: #fff8f1;
+  .object-fixed-slide_img {
+    width: 100%;
+  }
+}
+.object-fixed-slide1 {
+  background-color: #6496c7;
+  .object-fixed-slide1_img {
+    width: 120%;
+  }
+}
+.object-fixed-slide3 {
+  background-color: #ebb154;
+}
+.object-fixed-slide4 {
+  background-color: #7d7d7d;
 }
 
+// Object-Swiper
+.swiper {
+  width: 100%;
+}
 .swiper-slide {
   width: 200px;
   height: 227px;
@@ -490,11 +534,11 @@ p {
   }
 }
 .object-slide1-2 {
+  padding: 16px;
   background-color: #97c59b;
-  font-family: var(--font-family);
-  font-size: 24px;
-  font-weight: 400;
-  color: #fff;
+  .object-slide1-2 {
+    width: 100%;
+  }
 }
 .object-slide1-3 {
   padding: 16px;
@@ -504,11 +548,12 @@ p {
   }
 }
 .object-slide1-4 {
+  padding: 16px;
   background-color: #45b6c0;
-  font-family: var(--font-family);
-  font-size: 24px;
-  font-weight: 400;
   color: #fff;
+  .object-slide1-4_img {
+    width: 100%;
+  }
 }
 .object-slide1-5 {
   padding: 16px;
@@ -526,7 +571,7 @@ p {
 }
 .object-slide1-7 {
   background-color: #C4698C;
-  font-family: var(--font-family);
+  font-family: var(--font-pretendard);
   font-size: 24px;
   font-weight: 400;
   color: #fff;
@@ -534,22 +579,3 @@ p {
 
 
 
-// Object-fixed box
-.object-fixed {
-  width: 100%; 
-  .object-fixed-wrap {
-    display: flex;
-    gap: 30px;
-  }
-}
-.object-fixed-slide {
-  width: 227px;
-  height: 227px;
-  text-align: center;
-  font-size: 18px;
-  background-color: #fff8f1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px; 
-}

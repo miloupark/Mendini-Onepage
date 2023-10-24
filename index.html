@@ -22,8 +22,8 @@
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
   <link rel="stylesheet" type="text/css" href="fullpage.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="fullpage.min.css" />
   <link rel="stylesheet" href="./dist/css/comm.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -34,14 +34,23 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script type="text/javascript" src="../js/jquery.fullPage.js"></script>
   <script type="text/javascript" src="vendors/scrolloverflow.min.js"></script>
   <script type="text/javascript" src="fullpage.js"></script>
+  <script src="fullpage.min.js"></script>
+
   <script defer src="./dist/js/comm.js"></script>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
   <div id="fullpage" class="wrap">
+    <div class="section">Section 1</div>
+    <div class="section">Section 2</div>
+    <div class="section">Section 3</div>
+    <div class="section">Section 4</div>
     <header id="header" class="section header container-fluid">
       <h1 class="header-title">
         <div class="header-title_alessandro header-title-g">
@@ -152,47 +161,6 @@
         </div>
       </section>
 
-    
-<!-- 
-      <div class="biography-cont-g biography-cont-g-top">
-        <div class="biography-cont" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-          <span class="biography-text biography-cont-ml1">Alessandro Mendini is an Italian architect, and was born in Milan in 1931.</span><br>
-          <span class="biography-text biography-cont-ml2">He has been editor-in-chief of the magazines Casabella, Modo and Domus.
-          </span>
-        </div>
-        <div class="biography-cont" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
-          <span class="biography-text" >Monographs on his personal work and the projects he made in conjunction</span>
-        </div>
-        <div class="biography-cont" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
-          <span class="biography-text biography-cont-ml3" >with the Alchimia group have been published in different languages.</span>
-        </div>
-        <div class="biography-cont" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-          <span class="biography-text">Mendini makes design objects, furniture, interiors, paintings,
-            <br>installations and architecture. He produces work with international 
-          </span>
-        </div>
-        <div class="biography-cont" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-          <span class="biography-text biography-cont-ml1">manufacturers and editors, such as the Galerie kreo
-          </span>
-        </div>
-        <div class="biography-cont" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-          <span class="biography-text">in Paris since 2001. He is also a consultant for the image and brart
-          </span>
-        </div>
-        <div class="biography-cont" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-          <span class="biography-text biography-cont-ml1">direction of companies in Europe as well as the Far East.
-          </span>
-        </div>
-      </div>
-      <div class="biography-cont-g-bottom">
-        <div class="biography-cont" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
-          <span class="biography-text biography-cont-ml2">His theoretic and written work, along with his design work, 
-          finds <br>its origin at the crossroads between art, design and architecture.
-          </span>
-        </div>
-      </div>
-   -->
-      
       <!-- Architecture -->
       <section id="architecture" class="sec-g section architecture">
         <div class="sec-inner">
@@ -280,24 +248,53 @@
       <!-- Object -->
       <section id="object" class="sec-g section object">
         <div class="object-sec-inner">
+          <!-- Object-fixed box -->
+          <div class="object-fixed">
+            <div class="object-fixed-wrap">
+              <div class="object-fixed-slide1 object-fixed-slide">
+                <img class="object-fixed-slide1_img object-fixed-slide_img" src="./images/obj-parrot-sommelier-corkscrew3.png" alt="AlessandroM">
+              </div>
+              <div class="object-fixed-slide2 object-fixed-slide">
+                <img class="object-fixed-slide2_img object-fixed-slide_img" src="./images/alessandroM2.png" alt="AlessandroM">
+              </div>
+              <div class="object-fixed-slide3 object-fixed-slide">
+                <img class="object-fixed-slide3_img object-fixed-slide_img" src="./images/obj-alessini-proust-children-tableware5.png" alt="proust-children-tableware">
+              </div>
+              <div class="object-fixed-slide4 object-fixed-slide">
+                <img class="object-fixed-slide4_img object-fixed-slide_img" src="./images/obj-michael-graves-small-kettle2.png" alt="michael-graves-small-kettle">
+              </div>
+              <div class="object-fixed-slide5 object-fixed-slide">
+                <img class="object-fixed-slide5_img object-fixed-slide_img" src="./images/alessandroM3.png" alt="AlessandroM">
+              </div>
+              <div class="object-fixed-slide6 object-fixed-slide">
+                <img class="object-fixed-slide6_img object-fixed-slide_img" src="./images/obj-anna-g-galla-placidia-corkscrew1.png" alt="anna-g-galla-placidia-corkscrew">
+              </div>
+            </div>
+          </div>
           <!-- Object-Swiper -->
           <div class="swiper mySwiper-object1">
             <div class="object-wrap swiper-wrapper">
               <div class="object-slide1-1 swiper-slide">
                 <img class="object-slide1-1_img" src="./images/amuleto_lamp.png" alt="Amuleto lamp">
               </div>
-              <div class="object-slide1-2 swiper-slide">Amuleto Lamp</div>
+              <div class="object-slide1-2 swiper-slide">
+                <img class="object-slide1-2" src="./images/obj-michael-graves-small-kettle1.png" alt="michael-graves-small-kettle">
+              </div>
               <div class="object-slide1-3 swiper-slide">
                 <img class="object-slide1-3_img" src="./images/obj-parrot-sommelier-corkscrew2.png" alt="parrot corkscrew">
               </div>
-              <div class="object-slide1-4 swiper-slide">Parrot Corkscrew</div>
+              <div class="object-slide1-4 swiper-slide">
+                <img class="object-slide1-4_img" src="./images/obj-alessini-proust-children-tableware3.png" alt="children tableware package">
+              </div>
               <div class="object-slide1-5 swiper-slide">
                 <img class="object-slide1-5_img" src="./images/obj-alessini-childrens-cutlery2.png" alt="childrens curtlery">
               </div>
               <div class="object-slide1-6 swiper-slide">
                 <img class="object-slide1-6_img" src="./images/obj-alessini-childrens-cutlery1.png" alt="childrens curtlery box">
               </div>
-              <div class="object-slide1-7 swiper-slide">Childrens<br>Cutlery set</div>
+              <div class="object-slide1-7 swiper-slide">
+                <img class="object-slide1-7_img" src="object-slide1-7_img" alt="">
+              </div>
               <div class="object-slide1-8 swiper-slide">Slide 8</div>
               <div class="object-slide1-9 swiper-slide">Slide 9</div>
               <div class="object-slide1-10 swiper-slide">Slide 9</div>
@@ -308,86 +305,12 @@
               <div class="object-slide1-15 swiper-slide">Slide 9</div>
             </div>
           </div>
-          <!-- Object-fixed box -->
-          <div class="object-fixed">
-            <div class="object-fixed-wrap">
-              <div class="object-fixed-slide1 object-fixed-slide"></div>
-              <div class="object-fixed-slide2 object-fixed-slide"></div>
-              <div class="object-fixed-slide3 object-fixed-slide"></div>
-              <div class="object-fixed-slide4 object-fixed-slide"></div>
-              <div class="object-fixed-slide5 object-fixed-slide"></div>
-              <div class="object-fixed-slide6 object-fixed-slide"></div>
-            </div>
-          </div>
-          <!-- Object-Swiper2 -->
-          <div class="swiper mySwiper-object2">
-            <div class="object-wrap swiper-wrapper">
-              <div class="object-slide2-1 swiper-slide">
-                <img class="object-slide2-1_img" src="" alt="">
-              </div>
-              <div class="object-slide2-2 swiper-slide">Amuleto lamp</div>
-              <div class="object-slide2-3 swiper-slide">Slide 3</div>
-              <div class="object-slide2-4 swiper-slide">Slide 4</div>
-              <div class="object-slide2-5 swiper-slide">Slide 5</div>
-              <div class="object-slide2-6 swiper-slide">Slide 6</div>
-              <div class="object-slide2-7 swiper-slide">Slide 7</div>
-              <div class="object-slide2-8 swiper-slide">Slide 8</div>
-              <div class="object-slide2-9 swiper-slide">Slide 9</div>
-              <div class="object-slide2-10 swiper-slide">Slide 9</div>
-              <div class="object-slide2-11 swiper-slide">Slide 9</div>
-              <div class="object-slide2-12 swiper-slide">Slide 9</div>
-              <div class="object-slide2-13 swiper-slide">Slide 9</div>
-              <div class="object-slide2-14 swiper-slide">Slide 9</div>
-              <div class="object-slide2-15 swiper-slide">Slide 9</div>
-            </div>
-          </div>
-        
-
         </div>
-
-        <!-- <div div class="container">
-          <div class="title d-flex justify-content-center mb-5">
-            <h2>Object</h2>
-          </div>
-          <div class="row">
-            <div class="col-sm-4">
-              <h2>제목</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Reiciendis cumque libero explicabo placeat et odit facere porro quia. 
-                Et, voluptatum sapiente esse illo placeat nostrum sunt ab adipisci ipsum possimus.</p>
-            </div>
-            <div class="col-sm-4">
-              <h2>제목</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Reiciendis cumque libero explicabo placeat et odit facere porro quia. 
-                Et, voluptatum sapiente esse illo placeat nostrum sunt ab adipisci ipsum possimus.</p>
-            </div>
-            <div class="col-sm-4">
-              <h2>제목</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Reiciendis cumque libero explicabo placeat et odit facere porro quia. 
-                Et, voluptatum sapiente esse illo placeat nostrum sunt ab adipisci ipsum possimus.</p>
-            </div>
-          </div>
-        </div>     -->
       </section>
-      
       <footer id="footer"></footer>
     </main>
   </div>
-
-
-
-
-  <!-- <script>
-    new fullpage('#fullpage', {
-      //options here
-      autoScrolling:true,
-      scrollHorizontally: true
-    });
-  </script> -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  
 
 </body>
 </html>
