@@ -42,275 +42,146 @@
   <script type="text/javascript" src="vendors/scrolloverflow.min.js"></script>
   <script type="text/javascript" src="fullpage.js"></script>
   <script src="fullpage.min.js"></script>
-
   <script defer src="./dist/js/comm.js"></script>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
   <div id="fullpage" class="wrap">
-    <div class="section">Section 1</div>
-    <div class="section">Section 2</div>
-    <div class="section">Section 3</div>
-    <div class="section">Section 4</div>
-    <header id="header" class="section header container-fluid">
-      <h1 class="header-title">
-        <div class="header-title_alessandro header-title-g">
-          <span>A</span>
-          <div class="title-l-clip">
-            <span class="title-l">l</span>
-            <img class="alessandroM" src="./images/alessandroM.png" alt="alessi alessandroM">
-          </div>
-          <span>e</span>
-          <span>s</span>
-          <span>s</span>
-          <span>a</span>
-          <span>n</span>
-          <span>d</span>
-          <span>r</span>
-          <span>o</span>
+    <!-- fullpage 1st section -->
+    <div id="section" class="section fullpage-1st-sec">
+      <header id="header" class="header">
+        <!-- logo -->
+        <div class="header-logo">
+          <a class="header-logo-link" href="#">
+            <span class="blind">알레산드로 멘디니 로고</span>
+          </a>
         </div>
-        <div class="header-title_mendini header-title-g">
-          <span>m</span>
-          <span>e</span>
-          <span>n</span>
-          <span>d</span>
-          <span>i</span>
-          <span>n</span>
-          <span>i</span>
-        </div>
-      </h1>
-    </header>
-    
-    <!-- Nav -->
-    <nav class="navbar navbar-inverse navbar-expand-sm navbar-dark sticky-top">
-      <div class="container-fluid">
-        <h1>
-          <a class="navbar-brand" href="#"></a>
-        </h1>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
-          <ul class="nav navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#biography">
-                <span class="nav-tit">Biography</span>
+        <!-- nav -->
+        <div id="nav" class="nav">
+          <ul class="nav-lst">
+            <li class="nav-lst-item">
+              <a class="nav-lst-link" href="#about">
+                <span class="nav-tit">멘디니 이야기</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#architecture">
-                <span class="nav-tit">Architecture</span>
+            <li class="nav-lst-item">
+              <a class="nav-lst-link" href="#architecture">
+                <span class="nav-tit">건축물</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#furniture">
-                <span class="nav-tit">Furniture</span>
+            <li class="nav-lst-item">
+              <a class="nav-lst-link" href="#furniture">
+                <span class="nav-tit">가구</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#object">
-                <span class="nav-tit">Object</span>
+            <li class="nav-lst-item">
+              <a class="nav-lst-link" href="#object">
+                <span class="nav-tit">오브젝트</span>
               </a>
             </li>
           </ul>
         </div>
+      </header>
+      <div class="intro">
+        <!-- intro-title -->
+        <div class="intro-title-wrap">
+          <div class="intro-sub-title">
+            <svg xmlns="http://www.w3.org/2000/svg" width="240" height="48" viewBox="0 0 240 48" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M24 48C30.1468 48 35.7539 45.6892 40 41.8889C44.2461 
+              45.6892 49.8532 48 56 48C62.1468 48 67.754 45.6892 72 41.8889C76.246 45.6892 81.8532 48 88 48C94.1468 
+              48 99.754 45.6892 104 41.8889C108.246 45.6892 113.853 48 120 48C126.147 48 131.754 45.6892 136 
+              41.8889C140.246 45.6892 145.853 48 152 48C158.147 48 163.754 45.6892 168 41.8889C172.246 45.6892 177.853 
+              48 184 48C190.147 48 195.754 45.6892 200 41.8889C204.246 45.6892 209.853 48 216 48C229.255 48 240 37.2548 
+              240 24C240 10.7452 229.255 0 216 0C209.853 0 204.246 2.31083 200 6.11115C195.754 2.31083 190.147 0 184 0C177.853 0 
+              172.246 2.31083 168 6.11115C163.754 2.31083 158.147 0 152 0C145.853 0 140.246 2.31083 136 6.11115C131.754 2.31083 126.147 0
+               120 0C113.853 0 108.246 2.31083 104 6.11115C99.754 2.31083 94.1468 0 88 0C81.8532 0 76.246 2.31083 72 6.11115C67.754 
+               2.31083 62.1468 0 56 0C49.8532 0 44.2461 2.31083 40 6.11115C35.7539 2.31083 30.1468 0 24 0C10.7452 0 0 10.7452 
+               0 24C0 37.2548 10.7452 48 24 48Z" fill="#C3E3FF"/>
+              <text x="30" y="30" fill="black">밀라노의 디자이너, 건축가</text>
+            </svg>
+          </div>
+          <h1 class="intro-title">
+            <p class="intro-title-top">멘디니를 다시 만나는 시간</p>
+            <p class="intro-title-btm">알레산드로 멘디니</p>
+          </h1>
+        </div>
+        <!-- intro-animated-text -->
+        <div class="intro-animated-text-wrap">
+          <!-- intro-animated-text-top -->
+          <div class="intro-animated-text-g intro-animated-text-wrap-top">
+            <div class="intro-animated-track intro-animated-track-top">
+              <div class="intro-animated-text intro-animated-text-top">
+                &nbsp;멘디니를 다시 만나는 시간&nbsp;멘디니를 다시 만나는 시간&nbsp;멘디니를 다시 만나는 시간&nbsp;&nbsp;멘디니를 다시 만나는 시간&nbsp;멘디니를 다시 만나는 시간&nbsp;멘디니를 다시 만나는 시간
+              </div>
+            </div>
+          </div>
+          <!-- intro-animated-text-bottom -->
+          <div class="intro-animated-text-g intro-animated-text-wrap-btm">
+            <div class="intro-animated-track intro-animated-track-btm">
+              <div class="intro-animated-text intro-animated-text-btm">
+                &nbsp;멘디니를 다시 만나는 시간&nbsp;멘디니를 다시 만나는 시간&nbsp;멘디니를 다시 만나는 시간&nbsp;&nbsp;멘디니를 다시 만나는 시간&nbsp;멘디니를 다시 만나는 시간&nbsp;멘디니를 다시 만나는 시간
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </nav>
+    </div>
 
-    <main>
-      <!-- Biography -->
-      <section id="biography" class="section biography">
-        <h2 class="biography-title">Biography</h2>
-        <!-- Mendini who -->     
-        <div class="slide sec-inner mendini-who slide" data-anchor="slide1">
-          <div class="mendini-who-amuleto" data-aos="fade-up">
-            <span class="blind" aria-label="알레산드로 멘디니"></span>
+    <!-- fullpage 2nd section -->
+    <div id="about" class="section fullpage-2nd-sec">
+      <!-- about title -->
+      <div class="about-header">
+        <h2 class="about-title">멘디니 이야기</h2>
+        <div class="about-sub-title">
+          <!-- <span class="about-sub-title_key">멘디니를 만나보세요</span> -->
+          <span class="about-sub-title_summary">멘디니를 만나보세요</span>
+        </div>
+      </div>
+      <!-- about contents -->
+      <div class="about-main">
+        <h3 class="about-main-title">디자인계의 크고 빛나는 별</h3>
+        <div class="about-main-cont">
+          <div class="about-main-cont-txt">
+            <p class="about-main-cont-txt_about">1931년에 태어난 이탈리아 밀라노 출신의 디자이너이자 건축가인 알레산드로 멘디니는<br>88세의 나이로 생을 마감했다. 
+              밀라노 폴리테크니코 대학 건축학부를 졸업한 그는 하나의<br>디자인 아이템과 같은 건축, 또는 건축물처럼 견고한 디자인 아이템을 알레시, 스와치, 
+              마지스 등의 브랜드와 함께 만들었다. 그는 또한 이탈리아 최고의 디자인 스쿨인 도무스 아카데미의<br>공동 설립자였으며,
+              1970년부터 <모도>, <카사벨라>, <도무스> 등 3대 건축 잡지의 편집장을 역임하기도 했다. 1989년부터 지금까지 자신의 이름을 딴 회사, 
+              ‘아틀리에 멘디니’를 <br>건축가인 동생과 함께 운영하며 한평생 가구, 건축, 순수 예술을 아우르는 작품 활동을 했다.
+            </p>
           </div>
-          <div class="mendini-who-amuleto-cont amuleto-outer">
-            <p class="mendini-who__name amuleto-inner">Alessandro Mendini<br>Italian designer and architect</p>
-            <div class="mendini-who__jumping jumping-ball jump-animation"></div>
+          <div class="about-main-cont-image">
+            <span class="blind">알레산드로 멘디니 사진</span>
           </div>
         </div>
-        <!-- Mendini said -->
-        <div class="slide sec-inner mendini-said"
-        data-aos="fade-up"
-        data-aos-duration="3000" data-anchor="slide2">
-          <div class="mendini-said-image" 
-          data-aos="fade-right"
-          data-aos-offset="300"
-          data-aos-easing="ease-in-sine">
-            <span class="blind" aria-label="알레산드로 멘디니"></span>
-          </div>
-          <div class="mendini-said-text"
-          data-aos="fade-left"
-          data-aos-offset="300"
-          data-aos-easing="ease-in-sine">
-            <div class="mendini-said-quote">
-              <p class="mendini-said-quote_txt">“I treat objects as if they<br>
-                were human beings; I make<br> 
-                them smile.”
-              </p>
-            </div>
-            <div class="mendini-said-biography"
-            data-aos="fade-up"
-            data-aos-anchor-placement="center-bottom">
-              <p class="mendini-said-biography_txt">
-                Alessandro Mendini is an Italian architect, and was born in Milan in 1931. He has been editor-in-chief of the magazines Casabella, Modo and Domus. Monographs on his personal work and the projects he made in conjunction with the Alchimia group have been published in different languages. Mendini makes design objects, furniture, interiors, paintings, installations and architecture. He produces work with international manufacturers and editors, such as the Galerie kreo in Paris since 2001. He is also a consultant for the image and art direction of companies in Europe as well as the Far East. His theoretic and written work, along with his design work, finds its origin at the crossroads between art, design and architecture.
-              </p>
-            </div>
-          </div>
+      </div>
+    </div>
+    
+    <!-- fullpage 3rd section -->
+    <div id="architecture" class="section fullpage-3rd-sec">
+      <!-- architecture header -->
+      <div class="archi-header">
+        <h2 class="archi-title"></h2>
+        <div class="archi-sub-title">
+          <span class="archi-sub-title_key">멘디니를 만나보세요</span>
+          <span class="archi-sub-title_summary">멘디니를 만나보세요</span>
         </div>
-      </section>
+      </div>
+      <!-- architecture contents -->
+      <div class="archi-main">
+        <h3></h3>
+      </div>
+    </div>
 
-      <!-- Architecture -->
-      <section id="architecture" class="sec-g section architecture">
-        <div class="sec-inner">
-          <h2 class="sec-tit architecture-title">Architecture</h2>
-          <div class="architecture-image-g">
-            <div class="architecture-image-grid">
-              <img class="architecture1-img sticky" src="./images/mendini-arch6.png" alt="mendini architect">
-            </div>
-            <img class="architecture2-img sticky" src="./images/mendini-arch7.jpg" alt="mendini architect">
-            <img class="architecture3-img sticky" src="./images/mendini-arch5.png" alt="mendini architect">
-            <img class="architecture4-img sticky" src="./images/" alt="mendini architect">
-            <img class="architecture5-img sticky" src="./images/mendini-archi.webp" alt="mendini architect">
-          </div>
-          <div class="architecture-text-g">
-            <div class="architecture-animated-title">
-              <div class="architecture-animated-track">
-                <div class="architecture-animated-text">Torre Paradiso, Hiroshima, Japan, 1988
-                  This commemorative tower in Hiroshima was built to mark the centenary of the city's ferry terminal. 
-                  Its striking shape was designed by Mendini to create a symbol of 
-                  <span class="architecture-animated-text-effect">hope and prosperity</span> for the city.
-                </div>
-              </div>
-            </div>
-            <div class="architecture-animated-title">
-              <div class="architecture-animated-track">
-                <div class="architecture-animated-text archi-text-left"><span class="architecture-animated-text-effect">Steintor bus stops,</span> Hannover, Germany, 1992
-                  This bus and tram station in Hannover was hard to miss, with its black and yellow chequerboard walls and golden turrets.
-                  It was recently dismantled to make way for a new line, but is expected to be rebuilt in a new location soon.</div>
-              </div>
-            </div>
-            <div class="architecture-animated-title">
-              <div class="architecture-animated-track">
-                <div class="architecture-animated-text">Groninger Museum, Groningen, Netherlands, 1994 
-                  Mendini enlisted Philippe Starck, Michele De Lucchi and Coop Himmelb(l)au to help him design 
-                  the colourful collection of buildings that make up this important art and design <span class="architecture-animated-text-effect">museum</span> in Groningen.
-                  He designed the central museum building, which features a bold yellow tower, 
-                  while his collaborators added an assortment of unusual pavilions around it.
-                </div>
-              </div>
-            </div>
-            <div class="architecture-animated-title">
-              <div class="architecture-animated-track">
-                <div class="architecture-animated-text archi-text-left">Galleria Mendini, Lörrach, Germany, 2004
-                  Mendini's bold use of <span class="architecture-animated-text-effect"></span> colour and shape is used to liven up this otherwise simple commercial building. 
-                  It was originally intended as a shopping centre, hence the name, but eventually ended up as an office block.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    <!-- fullpage 4th section -->
+    <div id="" class="section fullpage-4rd-sec">
+      <h2></h2>
+    </div>
 
-      <!-- Furniture -->
-      <section id="furniture" class="section furniture">
-        <div class="sec-inner">
-          <h2 class="furniture-title">Furniture</h2>
-          <div class="furniture-column-g">
-            <div  data-aos="flip-right" class="furniture-column1">
-              <img  data-aos="fade-up" class="furniture-column1-img" src="./images/mendini-furniture9.png" alt="table">
-            </div>
-            <div data-aos="flip-up" class="furniture-column2">
-              <img class="furniture-column2-img" src="./images/mendini-furniture10.png" alt="sofa">
-            </div>
-            <div data-aos="flip-up" class="furniture-column3">
-              <img data-aos="fade-up" class="furniture-column3-back" src="./images/mendini-furniture7.png" alt="chair">
-              <img data-aos="fade-down" class="furniture-column3-front" src="./images/mendini-furniture8.png" alt="chair">
-              <img data-aos="fade-up" class="furniture-column3-back" src="./images/mendini-furniture7.png" alt="chair">
-              <img data-aos="fade-down" class="furniture-column3-front" src="./images/mendini-furniture8.png" alt="chair">
-            </div>
-            <div data-aos="flip-right" class="furniture-column4">
-              <div class="furniture-column4-img">
-                <img src="./images/mendini-furniture11.png" alt="lamp">
-              </div>
-            </div>
-            <div  data-aos="zoom-out-left" class="furniture-column5">
-              <img class="furniture-column5-img" src="./images/mendini-furniture3.png" alt="proust">
-            </div>
-            <div class="furniture-column6">
-              <img class="furniture-column6-img" src="./images/.png" alt="proust">
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Object -->
-      <section id="object" class="sec-g section object">
-        <div class="object-sec-inner">
-          <!-- Object-fixed box -->
-          <div class="object-fixed">
-            <div class="object-fixed-wrap">
-              <div class="object-fixed-slide1 object-fixed-slide">
-                <img class="object-fixed-slide1_img object-fixed-slide_img" src="./images/obj-parrot-sommelier-corkscrew3.png" alt="AlessandroM">
-              </div>
-              <div class="object-fixed-slide2 object-fixed-slide">
-                <img class="object-fixed-slide2_img object-fixed-slide_img" src="./images/alessandroM2.png" alt="AlessandroM">
-              </div>
-              <div class="object-fixed-slide3 object-fixed-slide">
-                <img class="object-fixed-slide3_img object-fixed-slide_img" src="./images/obj-alessini-proust-children-tableware5.png" alt="proust-children-tableware">
-              </div>
-              <div class="object-fixed-slide4 object-fixed-slide">
-                <img class="object-fixed-slide4_img object-fixed-slide_img" src="./images/obj-michael-graves-small-kettle2.png" alt="michael-graves-small-kettle">
-              </div>
-              <div class="object-fixed-slide5 object-fixed-slide">
-                <img class="object-fixed-slide5_img object-fixed-slide_img" src="./images/alessandroM3.png" alt="AlessandroM">
-              </div>
-              <div class="object-fixed-slide6 object-fixed-slide">
-                <img class="object-fixed-slide6_img object-fixed-slide_img" src="./images/obj-anna-g-galla-placidia-corkscrew1.png" alt="anna-g-galla-placidia-corkscrew">
-              </div>
-            </div>
-          </div>
-          <!-- Object-Swiper -->
-          <div class="swiper mySwiper-object1">
-            <div class="object-wrap swiper-wrapper">
-              <div class="object-slide1-1 swiper-slide">
-                <img class="object-slide1-1_img" src="./images/amuleto_lamp.png" alt="Amuleto lamp">
-              </div>
-              <div class="object-slide1-2 swiper-slide">
-                <img class="object-slide1-2" src="./images/obj-michael-graves-small-kettle1.png" alt="michael-graves-small-kettle">
-              </div>
-              <div class="object-slide1-3 swiper-slide">
-                <img class="object-slide1-3_img" src="./images/obj-parrot-sommelier-corkscrew2.png" alt="parrot corkscrew">
-              </div>
-              <div class="object-slide1-4 swiper-slide">
-                <img class="object-slide1-4_img" src="./images/obj-alessini-proust-children-tableware3.png" alt="children tableware package">
-              </div>
-              <div class="object-slide1-5 swiper-slide">
-                <img class="object-slide1-5_img" src="./images/obj-alessini-childrens-cutlery2.png" alt="childrens curtlery">
-              </div>
-              <div class="object-slide1-6 swiper-slide">
-                <img class="object-slide1-6_img" src="./images/obj-alessini-childrens-cutlery1.png" alt="childrens curtlery box">
-              </div>
-              <div class="object-slide1-7 swiper-slide">
-                <img class="object-slide1-7_img" src="object-slide1-7_img" alt="">
-              </div>
-              <div class="object-slide1-8 swiper-slide">Slide 8</div>
-              <div class="object-slide1-9 swiper-slide">Slide 9</div>
-              <div class="object-slide1-10 swiper-slide">Slide 9</div>
-              <div class="object-slide1-11 swiper-slide">Slide 9</div>
-              <div class="object-slide1-12 swiper-slide">Slide 9</div>
-              <div class="object-slide1-13 swiper-slide">Slide 9</div>
-              <div class="object-slide1-14 swiper-slide">Slide 9</div>
-              <div class="object-slide1-15 swiper-slide">Slide 9</div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <footer id="footer"></footer>
-    </main>
+    <!-- footer -->
+    <footer></footer>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
 
 </body>
 </html>

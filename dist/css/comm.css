@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
 @font-face {
   font-family: "Pretendard-Thin";
@@ -50,14 +51,260 @@
   font-weight: normal;
   font-style: normal;
 }
-* {
-  padding: 0;
+/* reset */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+button, header, main, footer, article {
   margin: 0;
-  font-family: "Pretendard Variable", Pretendard, GmarketSansMedium, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-p {
-  margin-bottom: 0;
+fieldset,
+img {
+  border: 0 none;
+}
+
+dl,
+ul,
+ol,
+menu,
+li {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+input,
+select,
+textarea {
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+button {
+  font-size: 100%;
+  vertical-align: middle;
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+}
+
+/* 뷰표트 변환시 폰트크기 자동확대 방지 */
+input[type=text], input[type=password], input[type=submit], input[type=search] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+input:checked[type=checkbox] {
+  background-color: #666;
+  -webkit-appearance: checkbox;
+}
+
+button {
+  -webkit-appearance: button;
+  border-radius: 0;
+}
+
+input[type=button], input[type=submit], input[type=reset], input[type=file] {
+  -webkit-appearance: button;
+  border-radius: 0;
+}
+input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/* 기본 폰트 설정 */
+/* mobile */
+body {
+  background: #fff;
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: "Poppins", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+  color: #222;
+}
+
+/* desktop */
+@media screen and (min-width: 1280px) {
+  body {
+    font-size: 16px;
+  }
+}
+/* color값은 디자인가이드에 맞게사용 */
+a {
+  color: #333;
+  text-decoration: none;
+}
+a:active, a:hover {
+  text-decoration: none;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+hr {
+  display: none;
+}
+
+input[type=password] {
+  font-family: "Malgun Gothic";
+}
+
+/* 웹폰트 사용시 점이 안보임 - 기본 폰트 사용  */
+/* skipnavigation */
+#u-skip {
+  position: relative;
+  z-index: 3000;
+}
+#u-skip a {
+  position: absolute;
+  top: -35px;
+  left: 0;
+  right: 0;
+  display: inline-block;
+  padding: 7px 10px 5px;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  opacity: 0;
+}
+#u-skip a:focus {
+  top: 0;
+  opacity: 1;
+  z-index: 1000;
+}
+
+/* 이미지 스프라이트 */
+.img-g {
+  display: inline-block;
+  overflow: hidden;
+  background: url(../../images/comm/img-comm.png) no-repeat;
+  vertical-align: top;
+}
+
+/* 이미지 */
+/* global */
+.ir-pm {
+  display: block;
+  overflow: hidden;
+  font-size: 0px;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/* 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
+.ir-wa {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+}
+
+/* 중요한 이미지 대체텍스트로 이미지off시에도 대체 텍스트를 보여주고자 할때 */
+.blind,
+caption,
+legend {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/* 대체텍스트가 아닌 접근성을 위한 숨김텍스트를 제공할때 */
+.f_l {
+  float: left;
+}
+
+.f_r {
+  float: right;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.tbl {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 테이블 초기화 */
+.clearfix {
+  display: block;
+  overflow: visible;
+  width: auto;
+  clear: both;
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  content: "";
 }
 
 :root {
@@ -77,7 +324,7 @@ p {
   --pnt-red: #FF0000;
   --pnt-blue: #0400FF;
   --font-pretendard: "Pretendard Variable";
-  --font-gmarket: "GmarketSansMedium";
+  --font-gmarket: "GmarketSans";
   --font-Black: #333;
   --font-white: #fff;
   --fz-HeaderTitle: 220px;
@@ -85,307 +332,109 @@ p {
   --fz-nav: 32px ;
 }
 
-section {
-  height: 100vh;
-  font-size: 35px;
-  text-align: center;
-  color: white;
-  font-weight: bold;
-  font-family: "Raleway", sans-serif;
-}
-
-layout .wrap {
+.wrap {
   width: 100%;
   margin: 0 auto;
 }
 
-.sec-g {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  padding: 100px 0;
-}
-
-.sec-inner {
+.section {
   width: 100%;
   height: 100vh;
   padding: 0 40px;
 }
 
-#header {
+.header {
   display: flex;
   width: 100%;
-  height: 100vh;
+  height: 12%;
   text-align: center;
-  align-items: center;
-  justify-content: center;
-  background-color: #333;
+  justify-content: space-between;
 }
-
-#main {
-  margin-top: 72px;
-}
-
-.header-title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: var(--font-pretendard);
-  font-size: var(--fz-HeaderTitle);
-  font-weight: 800;
-  line-height: 0.9;
-  color: var(--sub-color);
-}
-
-.header-title-g {
-  display: flex;
-  height: 220px;
-}
-
-.title-l-clip {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 4%;
-  height: 400px;
-  overflow: hidden;
-}
-
-.title-l {
+.header .header-logo {
   display: block;
-}
-
-.alessandroM {
-  position: absolute;
-  width: 60px;
-  height: 200px;
-  transform: translateY(-100%);
-  background: url(/images/alessandroM.png) 0 0 no-repeat;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.navbar {
-  padding: 0 16px;
-  background-color: var(--bg-grey);
-}
-
-.navbar-expand-sm .navbar-nav .nav-link {
-  padding: 0 40px;
-}
-
-.navbar-brand {
-  display: block;
-  width: 220px;
-  height: 80px;
+  width: 12%;
   background: url(/images/mendini-sign.png) 50% 50% no-repeat;
   background-size: contain;
 }
-
-.nav-item:active .nav-link {
-  background-color: #fff;
-}
-
-.nav-tit {
-  font-family: var(--font-pretendard);
-  font-weight: 700;
+.header .nav-lst {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  font-family: "Pretendard Variable";
   font-size: 20px;
-  color: var(--font-Black);
-}
-
-.biography {
-  width: 100%;
-  background-color: #514030;
-}
-
-.mendini-who {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.mendini-who-amuleto {
-  width: 180px;
-  height: 240px;
-  background: url(/images/amuleto_lamp.png) 0 0 no-repeat;
-  background-size: cover;
-}
-
-.mendini-who__name {
-  font-family: var(--font-pretendard);
-  font-size: 60px;
-  font-weight: 700;
-  color: #fff;
-}
-
-.jumping-ball {
-  width: 18px;
-  height: 18px;
-  background: blue;
-  border-radius: 100%;
-  position: fixed;
-  top: -45px;
-  right: -180px;
-  left: 0;
-  margin: auto;
-}
-
-.jump-animation {
-  background-color: yellow;
-  animation-name: bounce;
-  animation-duration: 800ms;
-  animation-direction: alternate;
-  animation-timing-function: cubic-bezier(0.79, 0.04, 0.8, 0.6);
-  animation-iteration-count: infinite;
-}
-
-@keyframes bounce {
-  0% {
-    transform: translate3d(0, 0, 0);
-    height: 18px;
-    background-color: yellow;
-  }
-  90% {
-    height: 18px;
-    background-color: #0400FF;
-  }
-  100% {
-    transform: translate3d(0, 60px, 0);
-    height: 18px;
-    background-color: red;
-  }
-}
-.mendini-said {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
-
-.mendini-said-image {
-  width: 50%;
-  height: 70%;
-  background: url(/images/mendini8.jpg) 20% 25% no-repeat;
-  opacity: 50% !important;
-}
-
-.mendini-said-text {
-  display: flex;
-  width: 50%;
-  height: 70%;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.mendini-said-quote_txt {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  font-family: var(--font-pretendard);
-  font-size: 40px;
   font-weight: 500;
-  padding: 20px 0;
-  color: #fff;
+  color: #333;
 }
 
-.mendini-said-biography {
-  font-family: var(--font-pretendard);
-  font-weight: 300;
-  color: #fff;
-  padding: 20px;
-  border-top: 1px solid #eee;
-}
-
-.architecture {
-  position: relative;
+.intro {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 453vh;
-  background-color: var(--bg-green);
+  height: 100%;
 }
 
-.architecture-title {
-  position: absolute;
-  bottom: 22px;
-  right: 40px;
-  font-family: var(--font-pretendard);
-  font-weight: 700;
-  font-size: 50px;
-  color: var(--font-white);
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+.intro-title-wrap {
+  display: flex;
+  width: 100%;
+  height: 76%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
 }
 
-.architecture-image-g {
-  height: 298vh;
-}
-.architecture-image-g .architecture-image-grid {
-  height: 20vh;
-}
-.architecture-image-g .architecture-image-grid .architecture1-img {
-  position: sticky;
-  display: block;
-  top: 80px;
-  width: 500px;
-}
-.architecture-image-g .architecture2-img {
-  position: sticky;
-  display: block;
-  top: 300px;
-  left: 600px;
-  width: 400px;
-}
-.architecture-image-g .architecture3-img {
-  position: sticky;
-  display: block;
-  top: 100px;
-  left: 990px;
-  width: 500px;
-  transform: scaleX(-1);
-}
-.architecture-image-g .architecture4-img {
-  position: sticky;
-  top: 200px;
-  right: 20px;
-  width: 400px;
-}
-.architecture-image-g .architecture5-img {
-  position: sticky;
-  display: block;
-  top: 500px;
-  right: 20px;
-  width: 500px;
+.intro-sub-title {
+  font-family: "Gmarket Sans";
+  font-weight: 400;
 }
 
-.architecture-animated-title {
+.intro-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Gmarket Sans";
+}
+
+.intro-title-top {
+  font-weight: 300;
+  font-size: 64px;
+}
+
+.intro-title-btm {
+  font-weight: 400;
+  font-size: 96px;
+}
+
+.intro-animated-text-wrap {
+  height: 22%;
+  padding: 0 !important;
+}
+
+.intro-animated-track {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-family: "Pretendard Variable";
+  font-weight: 400;
   position: relative;
   width: 100%;
   max-width: 100%;
-  height: auto;
-  font-size: 60px;
-  font-family: var(--font-pretendard);
-  font-weight: 500;
-  padding: 92px 0;
+  height: 100%;
+  padding: 24px 0;
   overflow-x: hidden;
   overflow-y: hidden;
+  border-top: 1px solid #333;
+}
+
+.intro-animated-track-btm {
   border-bottom: 1px solid #333;
 }
-.architecture-animated-title .architecture-animated-track {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-  will-change: transform;
-  animation: marquee 60s linear infinite;
-}
-.architecture-animated-title .archi-text-left {
+
+.intro-animated-text {
   position: absolute;
   white-space: nowrap;
   will-change: transform;
   animation: marquee 60s linear infinite;
-  animation-direction: reverse;
 }
 
 @keyframes marquee {
@@ -397,244 +446,63 @@ layout .wrap {
   }
 }
 @media (hover: hover) and (min-width: 700px) {
-  .architecture-animated-text {
-    color: #333;
+  .intro-animated-track .intro-animated-text {
     transform: translateY(calc(100% - 8rem));
   }
 }
-.architecture-animated-text-effect {
-  color: var(--bg-Maincolor);
-  font-weight: 900;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+.fullpage-2nd-sec {
+  background-color: #e7f4ff;
+  padding: 80px 40px;
 }
 
-.furniture {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  background: url(/images/mendini-arch10.jpg) 0 0 no-repeat;
-  background-position: 50% 40%;
-  background-size: cover;
+.about-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.furniture-title {
-  position: absolute;
-  bottom: 22px;
-  right: 40px;
-  font-family: var(--font-pretendard);
+.about-title {
+  font-family: "Gmarket Sans";
+  font-size: 56px;
   font-weight: 700;
-  font-size: 50px;
-  color: var(--font-white);
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
 }
 
-.furniture-column-g {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-}
-.furniture-column-g .furniture-column1 {
-  width: 240px;
-  height: 280px;
+.about-sub-title {
   border: 1px solid #333;
-  background-color: #FF8300;
-}
-.furniture-column-g .furniture-column1 .furniture-column1-img {
-  width: 238px;
-}
-.furniture-column-g .furniture-column2 {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  bottom: 140px;
-  left: 100px;
-  width: 600px;
-  height: 400px;
-  border: 1px solid #333;
-  border-radius: 80%;
-  background-color: var(--sub-color);
-}
-.furniture-column-g .furniture-column2 .furniture-column2-img {
-  width: 400px;
-}
-.furniture-column-g .furniture-column3 {
-  position: absolute;
-  top: 0;
-  left: 700px;
-  display: flex;
-  align-items: center;
-  height: 275px;
-  margin-top: 70px;
-  background-color: var(--bg-Maincolor);
-  border: 1px solid #333;
-}
-.furniture-column-g .furniture-column3 .furniture-column3-back {
-  display: block;
-  width: 134px;
-  margin-top: -90px;
-}
-.furniture-column-g .furniture-column3 .furniture-column3-front {
-  display: block;
-  width: 134px;
-  margin-top: 80px;
-  margin-left: 12px;
-}
-.furniture-column-g .furniture-column4 {
-  position: absolute;
-  display: flex;
-  top: 20px;
-  right: 20px;
-  width: 160px;
-  height: 450px;
-  background-color: #d9ffdf;
-  border: 1px solid #333;
-}
-.furniture-column-g .furniture-column4 .furniture-column4-img {
-  width: 80px;
-}
-.furniture-column-g .furniture-column5 {
-  position: absolute;
-  bottom: 110px;
-  right: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 240px;
-  height: 240px;
-  border: 1px solid #333;
-  background-color: #ffd0c1;
-}
-.furniture-column-g .furniture-column5 .furniture-column5-img {
-  width: 200px;
-}
-.furniture-column-g .furniture-column6 {
-  position: relative;
-  width: 800px;
-  height: 200px;
-  border: 1px solid #fff;
+  border-radius: 40px;
+  padding: 8px 16px;
 }
 
-.object {
-  background-color: #d3dfe9;
+.about-sub-title_summary {
+  font-family: "Gmarket Sans";
+  font-size: 20px;
+  font-weight: 300;
 }
 
-.object-sec-inner {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.about-main-title {
+  font-family: "Gmarket Sans";
+  font-size: 30px;
+  font-weight: 500;
+  padding-top: 80px;
 }
 
-.object-fixed {
-  width: 100%;
-}
-.object-fixed .object-fixed-wrap {
+.about-main-cont {
   display: flex;
-  gap: 30px;
+  justify-content: space-between;
+  padding-top: 40px;
 }
 
-.object-fixed-slide {
-  display: flex;
-  width: 227px;
-  height: 227px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-  padding: 16px;
+.about-main-cont-txt {
+  width: 50%;
+  font-family: "Pretendard Variable";
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.about-main-cont-image {
+  width: 35%;
+  height: 440px;
+  background: url(/images/mendini7.jpg) 0 0 no-repeat;
+  background-size: cover;
   border-radius: 20px;
-  background-color: #fff8f1;
-}
-.object-fixed-slide .object-fixed-slide_img {
-  width: 100%;
-}
-
-.object-fixed-slide1 {
-  background-color: #6496c7;
-}
-.object-fixed-slide1 .object-fixed-slide1_img {
-  width: 120%;
-}
-
-.object-fixed-slide3 {
-  background-color: #ebb154;
-}
-
-.object-fixed-slide4 {
-  background-color: #7d7d7d;
-}
-
-.swiper {
-  width: 100%;
-}
-
-.swiper-slide {
-  width: 200px;
-  height: 227px;
-  text-align: center;
-  font-size: 18px;
-  background-color: #dfdfdf;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-}
-
-.object-slide1-1 {
-  padding: 16px;
-  background-color: #604c40;
-}
-.object-slide1-1 .object-slide1-1_img {
-  width: 90%;
-}
-
-.object-slide1-2 {
-  padding: 16px;
-  background-color: #97c59b;
-}
-.object-slide1-2 .object-slide1-2 {
-  width: 100%;
-}
-
-.object-slide1-3 {
-  padding: 16px;
-  background-color: #fff;
-}
-.object-slide1-3 .object-slide1-3_img {
-  width: 120%;
-}
-
-.object-slide1-4 {
-  padding: 16px;
-  background-color: #45b6c0;
-  color: #fff;
-}
-.object-slide1-4 .object-slide1-4_img {
-  width: 100%;
-}
-
-.object-slide1-5 {
-  padding: 16px;
-  background-color: #6c757d;
-}
-.object-slide1-5 .object-slide1-5_img {
-  width: 100%;
-}
-
-.object-slide1-6 {
-  padding: 16px;
-  background-color: #fff;
-}
-.object-slide1-6 .object-slide1-6_img {
-  width: 120%;
-}
-
-.object-slide1-7 {
-  background-color: #C4698C;
-  font-family: var(--font-pretendard);
-  font-size: 24px;
-  font-weight: 400;
-  color: #fff;
 }/*# sourceMappingURL=comm.css.map */
