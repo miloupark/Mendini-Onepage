@@ -32,6 +32,10 @@ button, header, main, footer, article {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  line-height: 1.5;
+  color: #333;
 }
 
 fieldset,

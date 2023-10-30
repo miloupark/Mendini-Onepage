@@ -1,5 +1,8 @@
 {
   "dependencies": {
-    "fullpage.js": "^4.0.20"
+    "fullpage.js": "^4.0.20",
+    "matter-js": "^0.19.0",
+    "matter-tools": "^0.14.0",
+    "poly-decomp": "^0.3.0"
   }
 }

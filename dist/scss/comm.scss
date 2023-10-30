@@ -1,6 +1,6 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
 @import "variables", "mixin", "fonts", "reset";
-
 
 :root {
   --sm : 768px;
@@ -19,9 +19,6 @@
   --sub-color: #9BCFF1;
   --pnt-red: #FF0000;
   --pnt-blue: #0400FF;
-  
-  --font-pretendard : "Pretendard Variable";
-  --font-gmarket : "GmarketSans";
 
   --font-Black : #333;
   --font-white : #fff;
@@ -41,11 +38,25 @@
   height: 100vh;
   padding: 0 40px;
 }
-
+.intro-matterjs-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+   overflow-x: hidden;
+   overflow-y: hidden;
+}
 // fullpage 1st section
 .fullpage-1st-sec {
-  background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+  position: relative;
+  width: 100%;
+  height: 100vh;
 }
+
 // header
 .header {
   display: flex;
@@ -53,15 +64,16 @@
   height: 12%;
   text-align: center;
   justify-content: space-between;
+  border-bottom: 1px solid #333;
   .header-logo {
      display: block;
      width: 12%;
-    //  height: 80px;
      background:url(/images/mendini-sign.png) 50% 50% no-repeat;
      background-size: contain;
   }
   .nav-lst {
     display: flex;
+    height: 100%;
     align-items: center;
     gap: 48px;
     font-family: $pretendard;
@@ -80,35 +92,37 @@
 .intro-title-wrap {
   display: flex;
   width: 100%;
-  height: 76%;
+  height: 82%;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 24px;
+  padding-top: 120px;
 }
 .intro-sub-title {
-  font-family: $gmarket;
+  font-family: $nanumneo;
   font-weight: 400;
 }
 .intro-title {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: $gmarket;
-}
-.intro-title-top {
-  font-weight: 300;
-  font-size: 64px;
-}
-.intro-title-btm {
-  font-weight: 400;
-  font-size: 96px;
+  font-family: $nanum;
+  gap: -4px;
+  .intro-title-top {
+    font-weight: 400;
+    font-size: 56px;
+  }
+  .intro-title-btm {
+    font-weight: 700;
+    font-size: 96px;
+    transform: translateY(-8px);
+  }
 }
 
 // intro-animated-text
 .intro-animated-text-wrap {
-  height: 22%;
-  padding: 0!important;
+  height: 6%;
+  padding: 0;
 }
 .intro-animated-track {
   display: flex;
@@ -125,7 +139,7 @@
   overflow-y: hidden; 
   border-top: 1px solid #333;
 }
-.intro-animated-track-btm {
+.intro-animated-track {
   border-bottom: 1px solid #333;
 }
 .intro-animated-text {
@@ -147,230 +161,357 @@
   }
 }
 
+
 // fullpage 2nd section
 .fullpage-2nd-sec {
-  background-color: #e7f4ff;
-  padding: 80px 40px ;
+  background-color: $prim-blue;
+  padding: 0 40px;
 }
 .about-header {
+  width: 100%;
+  height: 16%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  // margin-top: 100px;
+  gap: 90px;
+  // padding-bottom: 40px;
+  border-bottom: 1px solid #333;
 }
 .about-title {
-  font-family: $gmarket;
-  font-size: 56px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: $nanumneo;
+  font-size: 42px;
   font-weight: 700;
+  gap: 12px;
+}
+.about-title-svg {  
+  background: url(/images/mendinishapes-black\ 7.svg) 0 0 no-repeat;
+  width: 40px;
+  height: 40px;
 }
 .about-sub-title {
-  border: 1px solid #333;
-  border-radius: 40px;
-  padding: 8px 16px;
+  display: flex;
+  flex-direction: column;
+  font-family: $nanumneo;
+  gap: 2px;
 }
-.about-sub-title_summary {
-  font-family: $gmarket;
+.about-sub-title_top {
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 600;
 }
-.about-main-title {
-  font-family: $gmarket;
-  font-size: 30px;
-  font-weight: 500;
-  padding-top: 80px;
+.about-sub-title_btm {
+  font-size: 16px;
+  font-weight: 400;
+}
+.about-main {
+  display: flex;
+  width: 100%;
+  height: 84%;
+  flex-direction: column;
+  font-family: $nanum;
 }
 .about-main-cont {
   display: flex;
-  justify-content: space-between;
-  padding-top: 40px;
-}
-.about-main-cont-txt {
-  width: 50%;
-  font-family: $pretendard;
-  font-weight: 300;
+  width: 100%;
+  height: 56%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
 }
-.about-main-cont-image {
-  width: 35%;
-  height: 440px;
-  background: url(/images/mendini7.jpg) 0 0 no-repeat;
+.about-main-image {
+  display: grid;
+  width: 100%;
+  height: 44%;
+  grid-template-columns: repeat(3, 1fr);
+}
+.about-main-image-left {
+  position: relative;
+  background:url(/images/mendini-arch10-b.jpg) 50% 50% no-repeat;
   background-size: cover;
-  border-radius: 20px;
+}
+.about-main-image-mid {
+  background:url(/images/mendini6.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  .about-main-image-mid-txt {
+    color: #fff;
+    margin: 10px 16px;
+  }
+}
+.about-main-image-right {
+  background:url(/images/studio.jpeg) 50% 50% no-repeat;
+  background-size: cover;
+  filter: grayscale(100%);
 }
 
-// section {
-//   height: 100vh;
-//   font-size: 35px;
-//   text-align: center;
-//   color: white;
-//   font-weight: bold;
-//   font-family: 'Raleway', sans-serif;
-// }
-// layout
-// .wrap {
-//   width: 100%;
-//   margin: 0 auto;
-// }
-// .sec-g {
-//   position: relative;
-//   width: 100%;
-//   height: 100vh;
-//   padding: 100px 0;
-// }
-// .sec-inner {
-//   width: 100%;
-//   height: 100vh;
-//   padding: 0 40px;
-// }
-// #header {
-//   display: flex;
-//   width: 100%;
-//   height: 100vh;
-//   text-align: center;
-//   align-items: center;
-//   justify-content: center;
-//   background-color: #333;
-// }
-// #main {
-//   margin-top: 72px;
-// }
 
-// // Header
-// .header-title {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   font-family: var(--font-pretendard);
-//   font-size: var(--fz-HeaderTitle);
-//   font-weight: 800;
-//   // letter-spacing: -.02em;
-//   line-height: .9;
-//   color: var(--sub-color);
-// }
-// .header-title-g {
-//   display: flex;
-//   height: 220px;
-// }
-// .title-l-clip {
-//   position: relative;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   width: 4%;
-//   height: 400px;
-//   overflow: hidden;
-// }
-// .title-l {
-//   display: block;
-// }
-// .alessandroM {
-//   position: absolute;
-//   // width: 234px;
-//   width: 60px;
-//   height: 200px;
-//   // translate: none; 
-//   // rotate: none; 
-//   // scale: none; 
-//   transform: translateY(-100%); 
-//   background: url(/images/alessandroM.png) 0 0 no-repeat;
-//   object-fit: cover;
-// }
+// fullpage 3rd section
+.fullpage-3rd-sec {
+  background-color: $prim-green;
+  padding: 0 40px;
+}
+.archi-header {
+  width: 100%;
+  height: 16%;
+  display: flex;
+  align-items: center;
+  gap: 90px;
+  // padding-bottom: 40px;
+  border-bottom: 1px solid #333;
+}
+.archi-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: $nanumneo;
+  font-size: 42px;
+  font-weight: 700;
+  gap: 12px;
+}
+.archi-title-svg {  
+  background: url(/images/mendinishapes-black\ 9.svg) 0 0 no-repeat;
+  width: 40px;
+  height: 40px;
+}
+.archi-sub-title {
+  display: flex;
+  flex-direction: column;
+  font-family: $nanumneo;
+  gap: 2px;
+}
+.archi-sub-title_top {
+  font-size: 20px;
+  font-weight: 600;
+}
+.archi-sub-title_btm {
+  font-size: 16px;
+  font-weight: 400;
+}
+.archi-main {
+  display: flex;
+  width: 100%;
+  height: 84%;
+  flex-direction: column;
+  font-family: $nanum;
+}
+.archi-main-cont {
+  display: flex;
+  width: 100%;
+  height: 56%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+.archi-main-image {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.archi-image-item {
+  // border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  &:nth-child(-n+3),&:nth-child(n+5):not(:nth-child(8))  {
+    border-right: 1px solid #333;
+  }
+  &:nth-child(-n+4) {
+    border-bottom: 1px solid #333;
+  }
+}
+// archi-image-item : png
+.archi1 {
+  height: 100%;
+  background:url(/images/mendini-arch5.png) 50% 50% no-repeat;
+  background-size: 70%;
+}
+.archi3 {
+  height: 100%;
+  background:url(/images/tower.png) 50% 50% no-repeat;
+  background-size: 18%;
+}
+.archi6 {
+  height: 100%;
+  background:url(/images/mendini-arch3.png) 50% 50% no-repeat;
+  background-size: cover;
+}
+.archi8 {
+  height: 100%;
+  background:url(/images/mendini-arch6.png) 50% 50% no-repeat;
+  background-size: 80%;
+}
+// archi-image-item : full
+.archi2 {
+  height: 100%;
+  background:url(/images/mendini-arch2.webp) 50% 80% no-repeat;
+  background-size: cover;
+}
+.archi4 {
+  height: 100%;
+  background:url(/images/mendini-archi.webp) 50% 50% no-repeat;
+  background-size: cover;
+}
+.archi5 {
+  height: 100%;
+  background:url(/images/mendini-arch4.jpg) 50% 80% no-repeat;
+  background-size: cover;
+}
+.archi7 {
+  height: 100%;
+  background:url(/images/mendini-arch8.jpg) 50% 80% no-repeat;
+  background-size: cover;
+}
 
 
-// // Nav
-// .navbar {
-//   padding: 0 16px;
-//   background-color: var(--bg-grey);  
-// }
-// .navbar-expand-sm .navbar-nav .nav-link {
-//   padding: 0 40px;
-// }
-// .navbar-brand {
-//   display: block;
-//   width: 220px;
-//   height: 80px;
-//   background:url(/images/mendini-sign.png) 50% 50% no-repeat;
-//   background-size: contain;
-// }
-// .nav-item {
-//   &:active {
-//     .nav-link {
-//       background-color: #fff;
-//     }
-//   }
-// }
-// .nav-tit {
-//   font-family: var(--font-pretendard);
-//   font-weight: 700;
-//   font-size: 20px;
-//   color: var(--font-Black);
-// }
+// fullpage 4rd section
+.fullpage-4rd-sec {
+  background-color: $prim-pink;
+  padding: 0 40px;
+}
+.furniture-header {
+  width: 100%;
+  height: 16%;
+  display: flex;
+  align-items: center;
+  gap: 90px;
+  // padding-bottom: 40px;
+  border-bottom: 1px solid #333;
+}
+.furniture-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: $nanumneo;
+  font-size: 42px;
+  font-weight: 700;
+  gap: 12px;
+}
+.furniture-title-svg {  
+  background: url(/images/mendinishapes-black\ 10.svg) 0 0 no-repeat;
+  width: 40px;
+  height: 40px;
+}
+.furniture-sub-title {
+  display: flex;
+  flex-direction: column;
+  font-family: $nanumneo;
+  gap: 2px;
+}
+.furniture-sub-title_top {
+  font-size: 20px;
+  font-weight: 600;
+}
+.furniture-sub-title_btm {
+  font-size: 16px;
+  font-weight: 400;
+}
 
-// // Biography
-// .biography {
-//   width: 100%;
-//   background-color: #514030;
-// }
-// // Mendini who
-// .mendini-who {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   width: 100%;
-//   // height: 100vh;
-// }
-// .mendini-who-amuleto {
-//   width: 180px;
-//   height: 240px;
-//   background: url(/images/amuleto_lamp.png) 0 0 no-repeat;
-//   background-size: cover;
-// }
-// .mendini-who__name {
-//   font-family: var(--font-pretendard);
-//   font-size: 60px;
-//   font-weight: 700;
-//   color: #fff;
-// }
-// .jumping-ball {
-//   width:18px;
-//   height:18px;
-//   background:blue;
-//   border-radius:100%;
-//   position:fixed;
-//   top:-45px;
-//   right:-180px;
-//   left:0;
-//   margin:auto;
-// }
-// .jump-animation{
-//   background-color: yellow;
-//   animation-name: bounce;
-//   animation-duration: 800ms;
-//   animation-direction: alternate;
-//   animation-timing-function: cubic-bezier(0.79, 0.04, 0.8, 0.6);
-//   animation-iteration-count: infinite;
-// }
-// @keyframes bounce {
-//   0% {
-//       transform: translate3d(0, 0, 0);
-//       // box-shadow: 0 581px 100px rgba(0, 0, 0, 0.05), inset 0 -15px 15px -5px rgba(0,0,0,0.2);
-//       height:18px;
-//       background-color: yellow;
-//     }
-    
-//     90% {
-//     height:18px;
-//     background-color: #0400FF;
-//   }
 
-//   100% {
-//       transform: translate3d(0, 60px, 0);
-//       // box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.1), inset 0 -15px 15px -5px rgba(0,0,0,0.3);
-//     height:18px;
-//     background-color: red;
-//   }
-// }
 
+
+// fullpage 5th section
+.fullpage-5th-sec {
+  background-color: $prim-orange;
+  padding: 0 40px;
+}
+.object-header {
+  width: 100%;
+  height: 16%;
+  display: flex;
+  align-items: center;
+  gap: 90px;
+  border-bottom: 1px solid #333;
+}
+.object-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: $nanumneo;
+  font-size: 42px;
+  font-weight: 700;
+  gap: 12px;
+}
+.object-title-svg {  
+  background: url(/images/mendinishapes-black\ 11.svg) 0 0 no-repeat;
+  width: 40px;
+  height: 40px;
+}
+.object-sub-title {
+  display: flex;
+  flex-direction: column;
+  font-family: $nanumneo;
+  gap: 2px;
+}
+.object-sub-title_top {
+  font-size: 20px;
+  font-weight: 600;
+}
+.object-sub-title_btm {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.swiper {
+  width: 240px;
+  height: 320px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.swiper-slide:nth-child(1n) {
+  background-color: rgb(206, 17, 17);
+}
+
+.swiper-slide:nth-child(2n) {
+  background-color: rgb(0, 140, 255);
+}
+
+.swiper-slide:nth-child(3n) {
+  background-color: rgb(10, 184, 111);
+}
+
+.swiper-slide:nth-child(4n) {
+  background-color: rgb(211, 122, 7);
+}
+
+.swiper-slide:nth-child(5n) {
+  background-color: rgb(118, 163, 12);
+}
+
+.swiper-slide:nth-child(6n) {
+  background-color: rgb(180, 10, 47);
+}
+
+.swiper-slide:nth-child(7n) {
+  background-color: rgb(35, 99, 19);
+}
+
+.swiper-slide:nth-child(8n) {
+  background-color: rgb(0, 68, 255);
+}
+
+.swiper-slide:nth-child(9n) {
+  background-color: rgb(218, 12, 218);
+}
+
+.swiper-slide:nth-child(10n) {
+  background-color: rgb(54, 94, 77);
+}
 // // Mendini said
 // .mendini-said {
 //   display: flex;

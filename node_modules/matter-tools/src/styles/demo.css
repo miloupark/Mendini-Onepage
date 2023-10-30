@@ -1,0 +1,445 @@
+/*
+*	MatterTools.Demo
+*/
+
+.matter-demo {
+  display: flex;
+  background: #14151f;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  padding: 50px 0 0 0;
+}
+
+.matter-demo,
+.matter-demo * {
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.matter-demo *:focus,
+.matter-demo *:active {
+  outline: 0;
+}
+
+.matter-demo *:-moz-focusring {
+  outline: 3px solid #4da4e4;
+  outline-offset: -1px;
+  z-index: 5;
+}
+
+.matter-demo *:focus-visible {
+  outline: 3px solid #4da4e4;
+  outline-offset: -1px;
+  z-index: 5;
+}
+
+.matter-demo.matter-demo-inline {
+  padding: 0;
+  height: inherit;
+}
+
+.matter-demo canvas {
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  max-width: 100%;
+  max-height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.matter-demo.matter-demo-inline canvas {
+  max-height: calc(100% - 49px);
+}
+
+.matter-is-fullscreen .matter-demo {
+  width: 100%;
+}
+
+.matter-is-fullscreen .dg.ac,
+.matter-is-fullscreen .ins-container {
+  display: none;
+}
+
+.matter-header-outer {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #0e0f19;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.matter-demo-inline .matter-header-outer {
+  position: static;
+  background: transparent;
+  z-index: 0;
+  width: 100%;
+}
+
+.matter-header {
+  width: 100%;
+  padding: 7px 20px 8px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.matter-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.matter-header h1 {
+  display: none;
+  margin: 0 12px 0 0;
+  width: 18px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.matter-header h1 a {
+  color: #c5c5cc;
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+  text-decoration: none;
+  padding: 3px 0 2px 0;
+  border-bottom: 1px solid transparent;
+  white-space: nowrap;
+  float: right;
+}
+
+.matter-header h1 a:hover,
+.matter-header h1 a:focus {
+  border-bottom: 1px solid #f5b862;
+  color: #fff;
+  outline: 0;
+}
+
+@media screen and (min-width: 300px) {
+  .matter-header h1 {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .matter-header h1 {
+    width: auto;
+    overflow: visible;
+  }
+}
+
+.btn-home {
+  display: none;
+}
+
+.matter-demo-title svg {
+  fill: #fff;
+  width: 14px;
+  height: 14px;
+  margin: 0px 0 -2px 2px;
+}
+
+.matter-link {
+  text-decoration: none;
+  line-height: 13px;
+  margin: 0 -10px 0 0;
+  flex-shrink: 0;
+}
+
+.matter-link:focus {
+  outline: none;
+}
+
+.matter-logo {
+  height: 33px;
+  width: 46px;
+}
+
+@media screen and (min-width: 1024px) {
+  .matter-logo {
+    width: 50px;
+  }
+}
+
+.matter-logo #m-triangle {
+  transform-origin: 14px 856px;
+  transition: transform 400ms ease;
+}
+
+.matter-link:focus #m-triangle,
+.matter-logo:hover #m-triangle {
+  transform: rotate(-30deg) translate(-98px, -25px);
+}
+
+.matter-logo #m-circle {
+  transition: transform 200ms ease;
+  transition-delay: 300ms;
+}
+
+.matter-link:focus #m-circle,
+.matter-logo:hover #m-circle {
+  transform: translate(18px, -33px);
+}
+
+.matter-logo #m-square {
+  transition: transform 150ms ease;
+  transition-delay: 400ms;
+}
+
+.matter-link:focus #m-square,
+.matter-logo:hover #m-square {
+  transform: translate(47px, -2px);
+}
+
+.matter-toolbar {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 18px 0 0;
+}
+
+.matter-select {
+  background: transparent;
+  color: #c5c5cc;
+  font-size: 14px;
+  line-height: 33px;
+  width: 100%;
+  outline: none;
+  padding: 0 25px 0 7px;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.matter-select option {
+  background: #fff;
+  color: #000;
+}
+
+.matter-select-wrapper {
+  height: 33px;
+  width: 100%;
+  min-width: 100px;
+  max-width: 175px;
+  position: relative;
+  display: inline-block;
+  margin-right: 4%;
+}
+
+.matter-select-wrapper:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  pointer-events: none;
+  width: 28px;
+  height: 100%;
+  background: linear-gradient(-90deg, rgb(14 15 25), rgb(14 15 25 / 0));
+  right: 23px;
+  top: 0;
+}
+
+.matter-demo-inline .matter-select-wrapper:after {
+  display: none;
+}
+
+.matter-select:hover,
+.matter-select-wrapper:hover .matter-select {
+  color: #fff;
+}
+
+.matter-select:focus-visible {
+  color: #fff;
+}
+
+.matter-select:-moz-focusring {
+  color: #fff;
+}
+
+.matter-select:focus {
+  outline: 0;
+}
+
+.matter-select-wrapper svg:hover,
+.matter-select-wrapper:hover svg {
+  background: #232635;
+}
+
+.matter-select-wrapper:hover:after svg {
+  fill: #fff;
+}
+
+.matter-select-wrapper svg {
+  display: block;
+  pointer-events: none;
+  fill: #cecece;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  z-index: 2;
+  top: 6px;
+  right: 0;
+  border-radius: 5px;
+  background: #101119;
+}
+
+.matter-btn {
+  border: 0;
+  background: #0b0c15;
+  width: 40px;
+  height: 33px;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1;
+  color: #c2cad4;
+  text-decoration: none;
+  text-align: center;
+  cursor: default;
+  flex-shrink: 0;
+  flex-grow: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.matter-btn svg {
+  fill: #fff;
+  width: 15px;
+  height: 15px;
+  margin: 2px 0 0 0;
+}
+
+.matter-demo-inline .matter-btn {
+  background: #0f0f13;
+}
+
+.matter-btn:hover {
+  background: #1c1f2d;
+  outline: none;
+}
+
+.matter-btn:active {
+  transform: translate(0px, 1px);
+}
+
+.matter-btn:focus-visible {
+  background: #1c1f2d;
+  outline: none;
+}
+
+.matter-btn:-moz-focusring {
+  background: #1c1f2d;
+  outline: none;
+}
+
+.matter-btn-tools {
+  position: relative;
+  display: none;
+  font-size: 15px;
+}
+
+.matter-btn-tools svg {
+  margin-left: -3px;
+}
+
+.matter-btn-inspect {
+  position: relative;
+  display: none;
+}
+
+.matter-btn-inspect svg {
+  margin-left: -3px;
+}
+
+.matter-btn-source {
+  display: none;
+  font-size: 12px;
+  text-align: center;
+  line-height: 31px;
+}
+
+.matter-btn-fullscreen {
+  position: relative;
+  font-size: 18px;
+}
+
+.matter-btn-fullscreen svg {
+  margin-left: -3px;
+}
+
+.matter-is-fullscreen .matter-btn-tools,
+.matter-is-fullscreen .matter-btn-inspect {
+  display: none;
+}
+
+.matter-btn-fullscreen:after,
+.matter-btn-tools:after,
+.matter-btn-inspect:after {
+  content: " ";
+  position: absolute;
+  bottom: 10px;
+  width: 3px;
+  height: 3px;
+  background: #f5df75;
+  border-radius: 1px;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 100ms ease, transform 100ms ease;
+}
+
+.matter-btn-inspect:after {
+  left: 31px;
+}
+
+.matter-btn-tools:after {
+  background: #f45f5f;
+  left: 28px;
+}
+
+.matter-btn-fullscreen:after {
+  background: #76f09b;
+  left: 32px;
+}
+
+.matter-is-fullscreen .matter-btn-fullscreen:after,
+.matter-gui-active .matter-btn-tools:after,
+.matter-inspect-active .matter-btn-inspect:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.ins-container,
+body .dg {
+  display: none;
+}
+
+@media screen and (min-width: 500px) {
+  .ins-container,
+  body .dg,
+  .matter-btn-tools,
+  .matter-btn-inspect,
+  .matter-btn-source {
+    display: block;
+  }
+}
