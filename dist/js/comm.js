@@ -16,7 +16,7 @@ let elements = [];
 window.addEventListener('resize', (e) => {
   w = window.innerWidth;
   h = window.innerHeight;
-  engine.render.canvas.width = w;
+  engine.render.canvas.width = w100;
   engine.render.canvas.height = h;
   
   Matter.Body.setPosition(wall2, Matter.Vector.create(w + 30, h * .5), { passive: true } );
@@ -55,7 +55,7 @@ for (var i = 0; i < numCircles; i++) {
   elements.push(Matter.Bodies.circle(x, y, fixedRadius, {
     render: {
       sprite: {
-        texture: '/images/mendinishapes 1.svg',
+        texture: '../../images/mendinishapes 1.svg',
         xScale: (fixedRadius / (245/2)) + 0.2,
         yScale: (fixedRadius / (227/2)) + 0.2
       }
@@ -64,7 +64,7 @@ for (var i = 0; i < numCircles; i++) {
   elements.push(Matter.Bodies.circle(x, y, fixedRadius, {
     render: {
       sprite: {
-        texture: '/images/mendinishapes 2.svg',
+        texture: '../../images/mendinishapes 2.svg',
         xScale: (fixedRadius / (245/2)) + 0.2,
         yScale: (fixedRadius / (227/2)) + 0.2
       }
@@ -73,7 +73,7 @@ for (var i = 0; i < numCircles; i++) {
   elements.push(Matter.Bodies.circle(x, y, fixedRadius, {
     render: {
       sprite: {
-        texture: '/images/mendinishapes 3.svg',
+        texture: '../../images/mendinishapes 3.svg',
         xScale: (fixedRadius / (245/2)) + 0.2,
         yScale: (fixedRadius / (227/2)) + 0.2
       }
@@ -82,7 +82,7 @@ for (var i = 0; i < numCircles; i++) {
   elements.push(Matter.Bodies.circle(x, y, fixedRadius, {
     render: {
       sprite: {
-        texture: '/images/mendinishapes 4.svg',
+        texture: '../../images/mendinishapes 4.svg',
         xScale: (fixedRadius / (245/2)) + 0.2,
         yScale: (fixedRadius / (227/2)) + 0.2
       }
@@ -91,7 +91,7 @@ for (var i = 0; i < numCircles; i++) {
   elements.push(Matter.Bodies.circle(x, y, fixedRadius, {
     render: {
       sprite: {
-        texture: '/images/mendinishapes 5.svg',
+        texture: '../../images/mendinishapes 5.svg',
         xScale: (fixedRadius / (245/2)) + 0.2,
         yScale: (fixedRadius / (227/2)) + 0.2
       }
@@ -115,19 +115,20 @@ Matter.World.add(engine.world, mouseConstraint);
 Matter.Engine.run(engine);
 
 
-// // object card
-// var swiper = new Swiper(".mySwiper1", {
-//   effect: "cards",
-//   grabCursor: true,
-// });
-// var swiper = new Swiper(".mySwiper2", {
-//   effect: "cards",
-//   grabCursor: true,
-// });
-// var swiper = new Swiper(".mySwiper3", {
-//   effect: "cards",
-//   grabCursor: true,
-// });
+// var img = new Image();
+// img.src = '../../images/mendinishapes 1.svg';
+// img.src = '../../images/mendinishapes 2.svg';
+// img.src = '../../images/mendinishapes 3.svg';
+// img.src = '../../images/mendinishapes 4.svg';
+// img.src = '../../images/mendinishapes 5.svg';
+
+// img.onload = function() {
+//     // 이미지가 로드된 후에만 'drawImage' 함수를 호출
+//     var canvas = document.getElementById('intro-matterjs-shapes'); // Canvas 요소의 ID로 바꾸세요
+//     var context = canvas.getContext('2d');
+//     context.drawImage(img, x, y); // 이미지를 Canvas에 그립니다.
+// };
+
 
 // Object-Swiper
 var swiper = new Swiper(".mySwiper-object1", {
@@ -147,3 +148,4 @@ var swiper = new Swiper(".mySwiper-object2", {
     disableOnInteraction: false,
   },
 });
+
