@@ -55,7 +55,7 @@ for (var i = 0; i < numCircles; i++) {
   elements.push(Matter.Bodies.circle(x, y, fixedRadius, {
     render: {
       sprite: {
-        texture: '../../images/mendinishapes 1.svg',
+        texture: 'https://raw.githubusercontent.com/miloupark/Mendini-Onepage/5941011ab642b06dc707dae6f4d902a89fbacef3/images/mendinishapes%201.svg',
         xScale: (fixedRadius / (245/2)) + 0.2,
         yScale: (fixedRadius / (227/2)) + 0.2
       }
@@ -64,7 +64,7 @@ for (var i = 0; i < numCircles; i++) {
   elements.push(Matter.Bodies.circle(x, y, fixedRadius, {
     render: {
       sprite: {
-        texture: '../../images/mendinishapes 2.svg',
+        texture: 'https://raw.githubusercontent.com/miloupark/Mendini-Onepage/5941011ab642b06dc707dae6f4d902a89fbacef3/images/mendinishapes%202.svg',
         xScale: (fixedRadius / (245/2)) + 0.2,
         yScale: (fixedRadius / (227/2)) + 0.2
       }
@@ -73,7 +73,7 @@ for (var i = 0; i < numCircles; i++) {
   elements.push(Matter.Bodies.circle(x, y, fixedRadius, {
     render: {
       sprite: {
-        texture: '../../images/mendinishapes 3.svg',
+        texture: 'https://raw.githubusercontent.com/miloupark/Mendini-Onepage/5941011ab642b06dc707dae6f4d902a89fbacef3/images/mendinishapes%203.svg',
         xScale: (fixedRadius / (245/2)) + 0.2,
         yScale: (fixedRadius / (227/2)) + 0.2
       }
@@ -82,7 +82,7 @@ for (var i = 0; i < numCircles; i++) {
   elements.push(Matter.Bodies.circle(x, y, fixedRadius, {
     render: {
       sprite: {
-        texture: '../../images/mendinishapes 4.svg',
+        texture: 'https://raw.githubusercontent.com/miloupark/Mendini-Onepage/5941011ab642b06dc707dae6f4d902a89fbacef3/images/mendinishapes%204.svg',
         xScale: (fixedRadius / (245/2)) + 0.2,
         yScale: (fixedRadius / (227/2)) + 0.2
       }
@@ -91,7 +91,7 @@ for (var i = 0; i < numCircles; i++) {
   elements.push(Matter.Bodies.circle(x, y, fixedRadius, {
     render: {
       sprite: {
-        texture: '../../images/mendinishapes 5.svg',
+        texture: 'https://raw.githubusercontent.com/miloupark/Mendini-Onepage/5941011ab642b06dc707dae6f4d902a89fbacef3/images/mendinishapes%205.svg',
         xScale: (fixedRadius / (245/2)) + 0.2,
         yScale: (fixedRadius / (227/2)) + 0.2
       }
