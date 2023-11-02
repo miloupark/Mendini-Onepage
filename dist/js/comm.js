@@ -139,13 +139,5 @@ var swiper = new Swiper(".mySwiper-object1", {
     disableOnInteraction: false,
   },
 });
-// Object-Swiper2
-var swiper = new Swiper(".mySwiper-object2", {
-  slidesPerView: 6,
-  spaceBetween: 30,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-});
+
 
