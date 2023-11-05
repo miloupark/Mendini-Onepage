@@ -458,10 +458,6 @@ legend {
   border-top: 1px solid #333;
 }
 
-.intro-animated-track {
-  border-bottom: 1px solid #333;
-}
-
 .intro-animated-text {
   position: absolute;
   white-space: nowrap;
