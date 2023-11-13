@@ -115,21 +115,6 @@ Matter.World.add(engine.world, mouseConstraint);
 Matter.Engine.run(engine);
 
 
-// var img = new Image();
-// img.src = '../../images/mendinishapes 1.svg';
-// img.src = '../../images/mendinishapes 2.svg';
-// img.src = '../../images/mendinishapes 3.svg';
-// img.src = '../../images/mendinishapes 4.svg';
-// img.src = '../../images/mendinishapes 5.svg';
-
-// img.onload = function() {
-//     // 이미지가 로드된 후에만 'drawImage' 함수를 호출
-//     var canvas = document.getElementById('intro-matterjs-shapes'); // Canvas 요소의 ID로 바꾸세요
-//     var context = canvas.getContext('2d');
-//     context.drawImage(img, x, y); // 이미지를 Canvas에 그립니다.
-// };
-
-
 // Object-Swiper
 var swiper = new Swiper(".mySwiper-object1", {
   slidesPerView: 6,
