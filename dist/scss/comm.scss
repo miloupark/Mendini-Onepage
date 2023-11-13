@@ -137,13 +137,10 @@
   width: 100%;
   max-width:100%; 
   height: 100%; 
-  padding: 27px 0; 
+  padding: 24px 0; 
   overflow-x: hidden; 
   overflow-y: hidden; 
   border-top: 1px solid #333;
-}
-.intro-animated-track {
-  border-bottom: 1px solid #333;
 }
 .intro-animated-text {
   position: absolute; 
@@ -392,7 +389,7 @@
 }
 .archi7 {
   height: 100%;
-  background:url(/images/mendini-arch8.jpg) 50% 80% no-repeat;
+  background:url(../../images/mendini-arch8.jpg) 50% 80% no-repeat;
   background-size: cover;
 }
 
