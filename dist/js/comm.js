@@ -117,12 +117,29 @@ Matter.Engine.run(engine);
 
 // Object-Swiper
 var swiper = new Swiper(".mySwiper-object1", {
-  slidesPerView: 6,
-  spaceBetween: 30,
+  slidesPerView: 8,
+  spaceBetween: 24,
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
   },
+  breakpoints: {
+    428: { 
+      slidesPerView: 3,
+      spaceBetween: 16,
+    },
+    744: {
+      slidesPerView: 4,
+    },
+    1024: {
+      slidesPerView: 5,
+      spaceBetween: 24,
+    },
+    1280: {
+      slidesPerView: 6,
+      spaceBetween: 24,
+    },
+  }
 });
 
 

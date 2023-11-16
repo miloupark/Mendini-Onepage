@@ -51,6 +51,7 @@
    overflow-x: hidden;
    overflow-y: hidden;
 }
+
 // fullpage 1st section
 .fullpage-1st-sec {
   position: relative;
@@ -85,6 +86,15 @@
     color: #333;
   }
 }
+@media screen and (max-width: 1280px) {
+  .header {
+    border-bottom: none;
+  }
+  .nav {
+    display: none;
+  }
+}
+
 // intro
 .intro {
   display: flex;
@@ -161,22 +171,16 @@
   }
 }
 
-
-// fullpage 2nd section
-.fullpage-2nd-sec {
-  background-color: $prim-blue;
-  padding: 0 40px;
-}
-.about-header {
+// fullpage 2-5 section comm / 공통
+.sec-header {
   width: 100%;
   height: 16%;
   display: flex;
   align-items: center;
   gap: 90px;
-  // padding-bottom: 40px;
   border-bottom: 1px solid rgba(0, 0, 0, .3);
 }
-.about-title {
+.sec-title {
   position: relative;
   display: flex;
   align-items: center;
@@ -185,10 +189,9 @@
   font-weight: 700;
   gap: 12px;
 }
-.about-title-svg {  
+.sec-title-svg {
   width: 40px;
   height: 40px;
-  background: url(../../images/mendinishapes-black\ 7.svg) 0 0 no-repeat;
   animation: rotate-center 0.8s ease-in-out 5s both infinite;
   @keyframes rotate-center {
     0% {
@@ -197,30 +200,30 @@
     100% {
       transform: rotate(360deg);
     }
-  }    
+  }   
 }
-.about-sub-title {
+.sec-sub-tit {
   display: flex;
   flex-direction: column;
   font-family: $nanumneo;
   gap: 2px;
 }
-.about-sub-title_top {
+.sec-sub-tit-top {
   font-size: 20px;
   font-weight: 600;
 }
-.about-sub-title_btm {
+.sec-sub-tit-btm {
   font-size: 16px;
   font-weight: 400;
 }
-.about-main {
+.sec-main {
   display: flex;
   width: 100%;
   height: 84%;
   flex-direction: column;
   font-family: $nanum;
 }
-.about-main-cont {
+.sec-main-cont {
   display: flex;
   width: 100%;
   height: 56%;
@@ -230,6 +233,43 @@
   font-size: 20px;
   font-weight: 300;
   line-height: 1.8;
+}
+// @media screen and (max-width: 1280px) {
+//   .sec-header {
+//     flex-direction: column;
+//     align-items: flex-start;
+//     justify-content: center;
+//     gap: 8px;
+//   }
+//   .sec-title {
+//     font-size: 36px;
+//   }
+//   .sec-title-svg {
+//     width: 32px;
+//     height: 32px;
+//   }
+//   .sec-sub-tit {
+//     padding-left: 48px;
+//   }
+//   .sec-sub-tit-top {
+//     font-size: 18px;
+//     font-weight: 500;
+//   }
+//   .sec-sub-tit-btm {
+//     font-size: 16px;
+//   }
+//   .sec-main-cont {
+//     font-size: 18px;
+//   }
+// }
+
+// fullpage 2nd section
+.fullpage-2nd-sec {
+  background-color: $prim-blue;
+  padding: 0 40px;
+}
+.about-title-svg {  
+  background: url(../../images/mendinishapes-black\ 7.svg) 0 0 no-repeat;
 }
 .about-main-image {
   display: grid;
@@ -262,75 +302,13 @@
   filter: grayscale(100%);
 }
 
-
 // fullpage 3rd section
 .fullpage-3rd-sec {
   background-color: $prim-green;
   padding: 0 40px;
 }
-.archi-header {
-  width: 100%;
-  height: 16%;
-  display: flex;
-  align-items: center;
-  gap: 90px;
-  // padding-bottom: 40px;
-  border-bottom: 1px solid rgba(0, 0, 0, .3);
-}
-.archi-title {
-  position: relative;
-  display: flex;
-  align-items: center;
-  font-family: $nanumneo;
-  font-size: 42px;
-  font-weight: 700;
-  gap: 12px;
-}
 .archi-title-svg {  
-  background: url(../../images/mendinishapes-black\ 9.svg) 0 0 no-repeat;
-  width: 40px;
-  height: 40px;
-  animation: rotate-center 0.8s ease-in-out 5s both infinite;
-  @keyframes rotate-center {
-    0% {
-      transform: rotate(0);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }    
-}
-.archi-sub-title {
-  display: flex;
-  flex-direction: column;
-  font-family: $nanumneo;
-  gap: 2px;
-}
-.archi-sub-title_top {
-  font-size: 20px;
-  font-weight: 600;
-}
-.archi-sub-title_btm {
-  font-size: 16px;
-  font-weight: 400;
-}
-.archi-main {
-  display: flex;
-  width: 100%;
-  height: 84%;
-  flex-direction: column;
-  font-family: $nanum;
-}
-.archi-main-cont {
-  display: flex;
-  width: 100%;
-  height: 56%;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-  font-weight: 300;
-  line-height: 1.8;
+  background: url(../../images/mendinishapes-black\ 9.svg) 0 0 no-repeat;  
 }
 .archi-main-image {
   display: grid;
@@ -339,7 +317,6 @@
   grid-template-rows: repeat(2, 1fr);
 }
 .archi-image-item {
-  // border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 20px;
   font-size: 30px;
   text-align: center;
@@ -350,6 +327,7 @@
     border-bottom: 1px solid #333;
   }
 }
+
 // archi-image-item : png
 .archi1 {
   height: 100%;
@@ -393,64 +371,13 @@
   background-size: cover;
 }
 
-
 // fullpage 4rd section
 .fullpage-4rd-sec {
   background-color: $prim-pink;
   padding: 0 40px;
 }
-.furniture-header {
-  width: 100%;
-  height: 16%;
-  display: flex;
-  align-items: center;
-  gap: 90px;
-  // padding-bottom: 40px;
-  border-bottom: 1px solid rgba(0, 0, 0, .3);
-}
-.furniture-title {
-  position: relative;
-  display: flex;
-  align-items: center;
-  font-family: $nanumneo;
-  font-size: 42px;
-  font-weight: 700;
-  gap: 12px;
-}
 .furniture-title-svg {  
   background: url(../../images/mendinishapes-black\ 10.svg) 0 0 no-repeat;
-  width: 40px;
-  height: 40px;
-  animation: rotate-center 0.8s ease-in-out 5s both infinite;
-  @keyframes rotate-center {
-    0% {
-      transform: rotate(0);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }    
-}
-.furniture-sub-title {
-  display: flex;
-  flex-direction: column;
-  font-family: $nanumneo;
-  gap: 2px;
-}
-.furniture-sub-title_top {
-  font-size: 20px;
-  font-weight: 600;
-}
-.furniture-sub-title_btm {
-  font-size: 16px;
-  font-weight: 400;
-}
-.furniture-main {
-  display: flex;
-  width: 100%;
-  height: 84%;
-  flex-direction: column;
-  font-family: $nanum;
 }
 .furniture-grid-cont {
   width: 100%;
@@ -466,7 +393,6 @@
   font-size: 30px;
 }
 .grid-item1 {
-
   grid-row: 1 / 3;
   grid-column: 1 / 3;
   background: url(../../images/mendini-furniture3.png) 50% 50% no-repeat;
@@ -510,60 +436,13 @@
   line-height: 1.8;
 }
 
-
 // fullpage 5th section
 .fullpage-5th-sec {
   background-color: $prim-orange;
   padding: 0 40px;
 }
-.object-header {
-  width: 100%;
-  height: 16%;
-  display: flex;
-  align-items: center;
-  gap: 90px;
-  border-bottom: 1px solid rgba(0, 0, 0, .3);
-}
-.object-title {
-  position: relative;
-  display: flex;
-  align-items: center;
-  font-family: $nanumneo;
-  font-size: 42px;
-  font-weight: 700;
-  gap: 12px;
-}
 .object-title-svg {  
-  background: url(../../images/mendinishapes-black\ 11.svg) 0 0 no-repeat;
-  width: 40px;
-  height: 40px;
-  animation: rotate-center 0.8s ease-in-out 5s both infinite;
-  @keyframes rotate-center {
-    0% {
-      transform: rotate(0);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }    
-}
-.object-sub-title {
-  display: flex;
-  flex-direction: column;
-  font-family: $nanumneo;
-  gap: 2px;
-}
-.object-sub-title_top {
-  font-size: 20px;
-  font-weight: 600;
-}
-.object-sub-title_btm {
-  font-size: 16px;
-  font-weight: 400;
-}
-.object-main {
-  width: 100%;
-  height: 84%;
+  background: url(../../images/mendinishapes-black\ 11.svg) 0 0 no-repeat; 
 }
 
 // Object-Swiper
@@ -678,4 +557,79 @@
   line-height: 1.8;
   font-family: $nanum;
   padding-bottom: 64px;
+}
+
+@media screen and (max-width: 1280px) {
+  .sec-header {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 8px;
+  }
+  .sec-title {
+    font-size: 36px;
+  }
+  .sec-title-svg {
+    width: 32px;
+    height: 32px;
+  }
+  .sec-sub-tit-top {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .sec-sub-tit-btm {
+    font-size: 16px;
+  }
+  .sec-main-cont {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .header .header-logo {
+    width: 14%;
+  }
+  .intro-title {
+    .intro-title-top {
+      font-size: 48px;
+    }
+    .intro-title-btm {
+      font-size: 80px;
+    }
+  }
+  .sec-sub-tit-btm {
+    font-size: 15px;
+  }
+  .sec-main-cont {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header .header-logo {
+    width: 18%;
+  }
+  .intro-title {
+    .intro-title-top {
+      font-size: 36px;
+    }
+    .intro-title-btm {
+      font-size: 60px;
+    }
+  }
+  .sec-sub-tit-btm {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header .header-logo {
+    width: 24%;
+  }
+  .intro-title {
+    .intro-title-top {
+      font-size: 24px;
+    }
+    .intro-title-btm {
+      font-size: 40px;
+      padding-top: 8px;
+    }
+  }
 }
